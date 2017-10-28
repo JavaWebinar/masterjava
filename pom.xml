@@ -94,6 +94,19 @@
             <version>21.0</version>
         </dependency>
         <dependency>
+            <groupId>one.util</groupId>
+            <artifactId>streamex</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.j2html</groupId>
+            <artifactId>j2html</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!--Test-->
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
