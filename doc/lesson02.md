@@ -37,7 +37,7 @@
 - <a href="http://genberm.narod.ru/xml/lections/xml/introduction.html">История создания</a>. <a href="http://www.duct-tape-architect.ru/?p=315">XML формат и технологии</a>, <a href="https://ru.wikipedia.org/wiki/XML">XML</a>
 - <a href="http://stackoverflow.com/questions/33746/xml-attribute-vs-xml-element#33757">Attribute vs Element</a>. 
 - <a href="http://genberm.narod.ru/xml/schema/schema0/2.7.html">sequence/ choice/ all/ group</a>. <a href="https://docstore.mik.ua/orelly/xml/schema/ch09_01.htm">Define referring to Another XML Element</a>
-- <a href="http://genberm.narod.ru/">Справочник по XML</a>
+- <a href="http://genberm.narod.ru/xml/lections.html">Лекции по XML</a>
 
 ## Работа с XML в Java
 
