@@ -1,13 +1,13 @@
 # Онлайн проекта  <a href="https://github.com/JavaWebinar/masterjava">Masterjava</a>.
 
-## [Материалы занятия (скачать все патчи можно через Download папки patch)](https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFSGFQZ2I0V2pmbXM) 
+## [Материалы занятия](https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFSGFQZ2I0V2pmbXM)  (скачать все патчи можно через Download папки patch)
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW2
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRFpzemZ0OHp3SUE">Scheme, j2html, JAXB</a>
-#### 3_1_HW2_schema.patch
+#### Apply 3_1_HW2_schema.patch
 - <a href="http://stackoverflow.com/questions/1631396/what-is-an-xsncname-type-and-when-should-it-be-used">xs:ID restriction</a>
 
-#### 3_2_HW2_JAXB.patch
+#### Apply 3_2_HW2_JAXB.patch
 > - убрал второй параметр xmlName (всегда `payload.xml`)  
 > - в `parseByJaxb` сделал закрытие `InputStream` сразу после обработки
 > - сделал методы статическими
@@ -20,18 +20,18 @@
 - <a href="http://j2html.com/">Java HTML5 builder</a>  
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZ3JzdFpOekliVjA">Optional: StAX</a>
-#### 3_3_HW2_StAX.patch
+#### Apply 3_3_HW2_StAX.patch
 > - зарефакторил в `StaxStreamProcessor` `doUntil()` и `getAttribute()` 
 > - константы вставил в код 
 > - вместо вложенного цикла для групп юзера сделал пересечение коллекций `Collections.disjoint` и для маскирования пустых групп `Strings.nullToEmpty`
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFbUFYY3E3Q24wRlk">StAX refactoring: startElement + JAXB</a>
-#### 3_4_StAX_refactoring.patch
+#### Apply 3_4_StAX_refactoring.patch
 - [Java XML API: выбираем правильно. StAX: работаем с удовольствием](https://habrahabr.ru/post/339716/)
 - [StAX + JAXB](http://blog.bdoughan.com/2012/08/handle-middle-of-xml-document-with-jaxb.html)
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNEMzQTMtZGtZWEk">Optional: XSLT</a>
-#### 3_5_HW2_xslt.patch
+#### Apply 3_5_HW2_xslt.patch
 > В `groups.xsl` добавил явный namespace. Теперь при создании xPath IDEA делает автодополнения
 
 - <a href="http://stackoverflow.com/questions/1667454/xsl-transformation-in-java-with-parameters">XSL Transformation in Java with parameters</a>
@@ -99,14 +99,14 @@
      - <a href="http://www.ofbizian.com/2014/09/camel-microservices.html">Apache Camel for Micro­service Architectures</a>
      
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFelJqQ0d5WllaR0k">Многомодульный Maven проект</a>
-#### 3_5_multimodule.patch
+#### Apply 3_5_multimodule.patch
 - <a href="https://github.com/JavaWebinar/topjava08/blob/doc/doc/lesson01.md#-4-maven">Maven на topjava</a>. Snapshot. <a href="http://maven.apache.org/guides/mini/guide-multiple-modules.html">The Reactor</a>.
-- <a href="http://stackoverflow.com/questions/17482320/maven-module-inheritance-vs-aggregation">maven module inheritance vs aggregation</a>
+- <a href="http://stackoverflow.com/questions/17482320/maven-module-inheritance-vs-aggregation">Maven module inheritance vs aggregation</a>
 - Расширение кругозора:
   - <a href="https://www.youtube.com/watch?v=21qdRgFsTy0">Антон Архипов, Евгений Борисов, Барух Садогурский — Maven vs Gradle vs SBT</a>
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW3
-- Сделать структуру проекта согласно схеме. В модулях c `packaging=pom` кода нет, корневое `src` перенести в другие модули.
+- Сделать структуру проекта согласно схеме. В модулях c `packaging=pom` кода нет, корневое `src` перенести в другие модули. `Matrix + Benchmark` перенести в модуль `test`.
 
 **Внимание: название модуля `export` в видео и картинке идеологически неверно. В коде и патчах переименовал в `import`.**
 
