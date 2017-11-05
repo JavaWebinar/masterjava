@@ -123,7 +123,7 @@ WAR модули:
 - Проверьте, что проект собирается!
 
 #### Optional
-- Реализовать простую форму заргузки файла `payload.xml` в модуле `import` (через StAX) и вывод в html импортированных пользователей (имя/email/flag)
+- Реализовать простую форму заргузки файла `payload.xml` в модуле `import` (через StAX) и отобразить импортированных пользователей (имя/email/flag) 
   - для отображения взять любой шаблон  (JSP, [Thymeleaf](http://www.concretepage.com/thymeleaf/java-thymeleaf-example-getting-started-with-thymeleaf), ...)
   - загрузку сделать через любую реализацию (Servlet 3.х предпочтительнее):
     - <a href="https://commons.apache.org/proper/commons-fileupload/">Commons FileUpload</a>
