@@ -130,3 +130,6 @@ WAR модули:
     - <a href="https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/tomcat/util/http/fileupload/package-summary.html">Tomcat fileupload copied and package renamed</a>
     - <a href="http://docs.oracle.com/javaee/6/tutorial/doc/glraq.html">Java EE 6 Tutorial: fileupload example</a>
     - <a href="https://gist.github.com/keesun/1604411">Servlet 3.0's FileUpload Sample</a>
+
+## Замечания:
+- 1: имя артифакта `artifactId` как и пакеты называть только lowercase. Обычно используют "-" как разделитель слов.
