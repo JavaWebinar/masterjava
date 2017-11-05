@@ -132,8 +132,7 @@ WAR модули:
     - <a href="https://gist.github.com/keesun/1604411">Servlet 3.0's FileUpload Sample</a>
 
 ## Замечания:
-- 1: имя артифакта `artifactId` как и пакеты называть только lowercase. Обычно используют "-" как разделитель слов.
-- 2: имя каталога модуля делайте такое же, как и `artifactId`: [Project Directories Should Match the Artifact ID](http://blog.sonatype.com/2011/01/maven-tip-project-directories-and-artifact-ids/)
+- 1: имя артифакта `artifactId` как и пакеты называть только в lowercase. Обычно используют "-" как разделитель слов. Имя каталога модуля лучше делать тоже самое: [Project Directories Should Match the Artifact ID](http://blog.sonatype.com/2011/01/maven-tip-project-directories-and-artifact-ids/)
 - 3: следите, чтобы пути в шаблонах были не от рута "/". Каждое приложение деплоится в свой Application Context.
 - 4: чтобы не дублировать `maven-war-plugin` сделать `paren-web`. Он наследуется от `parent`, а от него наследуются все war модули.
 - 5: При парсинге пользователей через `JaxbParser` учтите, что он многопоточный!
