@@ -37,6 +37,10 @@
 
 - [File upload using Servlet 3.0 API](http://www.ewebtutorials.com/file-upload-using-servlet-3-0-api-in-java.html)
 
+> Вопрос: если в загружаем большой файл, то он придет частями? В этом случае используем `req.getParts()` и у каждой части можно получить InputStream. А как все части файла собрать вместе и получить итоговый InputStream, который уже можно передать StAX-процессору?
+
+`Part` это одно поле формы и на части уже не бъется. В `@MultipartConfig` можно через аттрибуты задать лимит `fileSizeThreshold`,  когда входящий поток будет сохраняться в файле. Все происходит внизу Multipart API, `InputStream` из мы получаем также: `filePart.getInputStream()`
+
 ----------------
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Maven. Поиск и разрешение конфликтов зависимостей](https://drive.google.com/file/d/0B9Ye2auQ_NsFbFFpWWFzRWE3ekU)
 - Пример для сборки `upload + mail-service + зависимости` из **корня проекта**:
