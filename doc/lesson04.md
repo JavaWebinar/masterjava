@@ -40,7 +40,7 @@
 
 ----------------
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Maven. Поиск и разрешение конфликтов зависимостей](https://drive.google.com/file/d/0B9Ye2auQ_NsFbFFpWWFzRWE3ekU)
-- Пример для сборки `upload + mail-service + зависимости` из **кореня проекта**:
+- Пример для сборки `upload + mail-service + зависимости` из **корня проекта**:
 ```
     mvn -pl services\mail-service,web\upload -am install
 ```    
