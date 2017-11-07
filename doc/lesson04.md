@@ -33,7 +33,6 @@
 - [Thread-safe TemplateEngine.process](http://stackoverflow.com/a/23007118/548473)
 
 #### 4_3_HW3_upload_servlet3.patch
-> - Реализовал парсинг через StAX+JAXB
 > - Добавил проверку на отсутствие выбранного файла
 
 - [File upload using Servlet 3.0 API](http://www.ewebtutorials.com/file-upload-using-servlet-3-0-api-in-java.html)
