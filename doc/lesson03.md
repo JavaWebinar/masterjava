@@ -130,6 +130,8 @@ WAR модули:
     - <a href="https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/tomcat/util/http/fileupload/package-summary.html">Tomcat fileupload copied and package renamed</a>
     - <a href="http://docs.oracle.com/javaee/6/tutorial/doc/glraq.html">Java EE 6 Tutorial: fileupload example</a>
     - <a href="https://gist.github.com/keesun/1604411">Servlet 3.0's FileUpload Sample</a>
+- Сделать загрузку через StAX+JAXB многопоточно. Сейчас `JaxbParser` реализован с `synchronize`, что означает что он потокобезопасен (может работать с несколькими запросами), но последовательно, в одном потоке. Нужен рефакторинг.
+  - [Thread safe of JAXBContext, Marshaller, Unmarshalleris](https://stackoverflow.com/a/37926057/548473)
 
 ## Замечания:
 - 1: имя артифакта `artifactId` как и пакеты называть только в lowercase. Обычно используют "-" как разделитель слов. Имя каталога модуля лучше делать тоже самое: [Project Directories Should Match the Artifact ID](http://blog.sonatype.com/2011/01/maven-tip-project-directories-and-artifact-ids/)
