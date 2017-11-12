@@ -80,16 +80,12 @@ public class MainXml {
 
             // Projects loop
             projects:
-            while (processor.doUntil(XMLEvent.START_ELEMENT, "Project")) {
+            while (processor.startElement("Project", "Projects")) {
                 if (projectName.equals(processor.getAttribute("name"))) {
-                    // Groups loop
-                    String element;
-                    while ((element = processor.doUntilAny(XMLEvent.START_ELEMENT, "Project", "Group", "Users")) != null) {
-                        if (!element.equals("Group")) {
-                            break projects;
-                        }
+                    while (processor.startElement("Group", "Project")) {
                         groupNames.add(processor.getAttribute("name"));
                     }
+                    break;
                 }
             }
             if (groupNames.isEmpty()) {
@@ -99,12 +95,11 @@ public class MainXml {
             // Users loop
             Set<User> users = new TreeSet<>(USER_COMPARATOR);
 
+            JaxbParser parser = new JaxbParser(User.class);
             while (processor.doUntil(XMLEvent.START_ELEMENT, "User")) {
                 String groupRefs = processor.getAttribute("groupRefs");
                 if (!Collections.disjoint(groupNames, Splitter.on(' ').splitToList(nullToEmpty(groupRefs)))) {
-                    User user = new User();
-                    user.setEmail(processor.getAttribute("email"));
-                    user.setValue(processor.getText());
+                    User user = parser.unmarshal(processor.getReader(), User.class);
                     users.add(user);
                 }
             }

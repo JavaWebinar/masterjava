@@ -15,31 +15,43 @@ public class StaxStreamProcessor implements AutoCloseable {
         reader = FACTORY.createXMLStreamReader(is);
     }
 
-    public XMLStreamReader getReader() {
-        return reader;
+    public boolean startElement(String element, String parent) throws XMLStreamException {
+        while (reader.hasNext()) {
+            int event = reader.next();
+            if (parent != null && isElementEnd(event, parent)) {
+                return false;
+            }
+            if (isElementStart(event, element)) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public boolean doUntil(int stopEvent, String value) throws XMLStreamException {
-        return doUntilAny(stopEvent, value) != null;
+    private boolean isElementStart(int event, String el) {
+        return event == XMLEvent.START_ELEMENT && el.equals(reader.getLocalName());
+    }
+
+    private boolean isElementEnd(int event, String el) {
+        return event == XMLEvent.END_ELEMENT && el.equals(reader.getLocalName());
+    }
+
+    public XMLStreamReader getReader() {
+        return reader;
     }
 
     public String getAttribute(String name) throws XMLStreamException {
         return reader.getAttributeValue(null, name);
     }
 
-    public String doUntilAny(int stopEvent, String... values) throws XMLStreamException {
+    public boolean doUntil(int stopEvent, String value) throws XMLStreamException {
         while (reader.hasNext()) {
             int event = reader.next();
-            if (event == stopEvent) {
-                String xmlValue = getValue(event);
-                for (String value : values) {
-                    if (value.equals(xmlValue)) {
-                        return xmlValue;
-                    }
-                }
+            if (event == stopEvent && value.equals(getValue(event))) {
+                return true;
             }
         }
-        return null;
+        return false;
     }
 
     public String getValue(int event) throws XMLStreamException {
