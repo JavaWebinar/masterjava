@@ -37,6 +37,10 @@
 
 `Part` это одно поле формы и на части уже не бъется. В `@MultipartConfig` можно через аттрибуты задать лимит `fileSizeThreshold`,  когда входящий поток будет сохраняться в файле. Все происходит внизу Multipart API, `InputStream` из мы получаем также: `filePart.getInputStream()`
 
+#### 4_4_HW3_jaxb_stax.patch
+- [JAXB creating context and marshallers cost](https://stackoverflow.com/a/7400735/548473)
+- [Именование private static референсных изменяемых объектов](https://google.github.io/styleguide/javaguide.html#s5.2.4-constant-names)
+
 ----------------
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Maven. Поиск и разрешение конфликтов зависимостей](https://drive.google.com/file/d/0B9Ye2auQ_NsFbFFpWWFzRWE3ekU)
 - Пример для сборки `upload + mail-service + зависимости` из **корня проекта**:
@@ -50,15 +54,15 @@
 mvn dependency:tree
 mvn project-info-reports:dependencies
 ```
-#### 4_4_dependencies.patch
+#### 4_5_dependencies.patch
 
 - <a href="https://habrahabr.ru/company/jugru/blog/191246/">Разрешение конфликтов в транзитивных зависимостях</a>
 - <a href="https://ru.wikipedia.org/wiki/Dependency_hell">Dependency hell</a>
 ```
 mvn project-info-reports:dependency-convergence
 ```
-#### 4_5_fix_convergence.patch
-#### 4_6_enforcer.patch
+#### 4_6_fix_convergence.patch
+#### 4_7_enforcer.patch
 - <a href="http://maven.apache.org/enforcer/maven-enforcer-plugin/">Maven Enforcer Plugin</a>
 ```
 mvn clean install
@@ -78,7 +82,7 @@ mvn dependency:analyze
 - <a href="https://maven.apache.org/plugins/maven-dependency-plugin/analyze-mojo.html">Analyze used and declared; used and undeclared; unused and declared</a>
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSTR0cTl4NjE1OEE">Подключаем логирование с общими настройкам</a>
-#### 4_7_logging.patch
+#### 4_8_logging.patch
 > - Перенес подключение `logback-test.xml` из `parent-web` в `parent` (он используется в JUnit тестах, которые могут быть в любом модуле)
 > - Добавил в корень проекта `config_templates` с копией конфигурации. 
 Общие файлы конфигурации заданы в maven parent как в `<masterjava.config>/apps/masterjava/config/</masterjava.config>`.
@@ -106,7 +110,7 @@ mvn dependency:analyze
    - [Combining Spring Boot and JDBI](https://www.sitepoint.com/combining-spring-boot-and-jdbi)
 
 ### Tomcat Class Loader. Memory Leeks
-#### 4_8_context.patch
+#### 4_9_context.patch
 > Cохранил конфигурацию Tomcat `context.xml`, в котором конфигурируется `jdbc/masterjava`. **Ее надо будет положить в ${TOMCAT_HOME}/conf**
 
 - <a href="https://tomcat.apache.org/tomcat-8.0-doc/class-loader-howto.html">Class Loader HOW-TO</a>
@@ -115,7 +119,7 @@ mvn dependency:analyze
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFa1JVQmRhQVdYdzA">Модуль `persist`</a>
 **ВНИМАНИЕ! перед накаткой патча создайте в корне проекта каталоги `persist\src\main` и `persist\src\test`, иначе патч промахивается.**
-#### 4_9_persist.patch
+#### 4_10_persist.patch
 - <a href="http://stackoverflow.com/a/2322214/548473">Postgresql enum advantages/disadvantages</a>
 - <a href="http://stackoverflow.com/a/7834949/548473">ALTER Enum types since 9.1</a>
 - <a href="https://gitlab.com/rbertoncelj/jdbi-entity-mapper">Simple EntityMapper with `@Column` support</a>
