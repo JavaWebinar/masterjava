@@ -9,6 +9,7 @@
     <name>Web</name>
 
     <modules>
+        <module>common-web</module>
         <module>upload</module>
         <module>webapp</module>
     </modules>

@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Application error</title>
+</head>
+<body>
+
+<div class="jumbotron">
+    <div class="container">
+        <br>
+        <h4>Application error: </h4>
+        <!--/*@thymesVar id="exception" type="java.lang.Exception"*/-->
+        <h2 th:text="${exception.message}">exception.message</h2>
+        <ul>
+            <li th:each="item:${exception.stackTrace}" th:text="${item}"></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
