@@ -10,31 +10,37 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
 public class JaxbParserTest {
-    private static final JaxbParser JAXB_PARSER = new JaxbParser(ObjectFactory.class);
+    //    https://google.github.io/styleguide/javaguide.html#s5.2.4-constant-names
+    private static final JaxbParser jaxbParser;
+    private static final JaxbMarshaller marshaller;
+    private static final JaxbUnmarshaller unmarshaller;
 
     static {
-        JAXB_PARSER.setSchema(Schemas.ofClasspath("payload.xsd"));
+        jaxbParser = new JaxbParser(ObjectFactory.class);
+        jaxbParser.setSchema(Schemas.ofClasspath("payload.xsd"));
+        marshaller = jaxbParser.createMarshaller();
+        unmarshaller = jaxbParser.createUnmarshaller();
     }
 
     @Test
     public void testPayload() throws Exception {
 //        JaxbParserTest.class.getResourceAsStream("/city.xml")
-        Payload payload = JAXB_PARSER.unmarshal(
+        Payload payload = unmarshaller.unmarshal(
                 Resources.getResource("payload.xml").openStream());
-        String strPayload = JAXB_PARSER.marshal(payload);
-        JAXB_PARSER.validate(strPayload);
+        String strPayload = marshaller.marshal(payload);
+        jaxbParser.validate(strPayload);
         System.out.println(strPayload);
     }
 
     @Test
     public void testCity() throws Exception {
-        JAXBElement<CityType> cityElement = JAXB_PARSER.unmarshal(
+        JAXBElement<CityType> cityElement = unmarshaller.unmarshal(
                 Resources.getResource("city.xml").openStream());
         CityType city = cityElement.getValue();
         JAXBElement<CityType> cityElement2 =
                 new JAXBElement<>(new QName("http://javaops.ru", "City"), CityType.class, city);
-        String strCity = JAXB_PARSER.marshal(cityElement2);
-        JAXB_PARSER.validate(strCity);
+        String strCity = marshaller.marshal(cityElement2);
+        jaxbParser.validate(strCity);
         System.out.println(strCity);
     }
 }
