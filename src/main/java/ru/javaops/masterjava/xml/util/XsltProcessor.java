@@ -40,4 +40,8 @@ public class XsltProcessor {
     public static String getXsltHeader(String xslt) {
         return "<?xml-stylesheet type=\"text/xsl\" href=\"" + xslt + "\"?>\n";
     }
+
+    public void setParameter(String name, String value) {
+        xformer.setParameter(name, value);
+    }
 }
