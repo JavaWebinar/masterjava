@@ -12,6 +12,9 @@
     <url>https://github.com/JavaOPs/masterjava</url>
 
     <modules>
+        <module>parent</module>
+        <module>parent-web</module>
+
         <module>common</module>
         <module>test</module>
 
