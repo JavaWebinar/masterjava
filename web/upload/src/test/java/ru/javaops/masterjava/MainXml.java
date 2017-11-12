@@ -20,7 +20,6 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static com.google.common.base.Strings.nullToEmpty;
 import static j2html.TagCreator.*;
@@ -74,9 +73,7 @@ public class MainXml {
         final Set<Project.Group> groups = new HashSet<>(project.getGroup());  // identity compare
         return StreamEx.of(payload.getUsers().getUser())
                 .filter(u -> !Collections.disjoint(groups, u.getGroupRefs()))
-                .collect(
-                        Collectors.toCollection(() -> new TreeSet<>(USER_COMPARATOR))
-                );
+                .toCollection(() -> new TreeSet<>(USER_COMPARATOR));
     }
 
     private static Set<User> processByStax(String projectName, URL payloadUrl) throws Exception {

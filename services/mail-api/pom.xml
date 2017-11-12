@@ -7,33 +7,20 @@
     <parent>
         <groupId>ru.javaops</groupId>
         <artifactId>parent</artifactId>
-        <relativePath>../parent/pom.xml</relativePath>
+        <relativePath>../../parent/pom.xml</relativePath>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>upload</artifactId>
+    <artifactId>mail-api</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
-    <name>Upload</name>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <name>Mail API</name>
 
     <dependencies>
         <dependency>
-            <groupId>ru.javaops</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+
 </project>
