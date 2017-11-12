@@ -12,6 +12,7 @@
     </appender>
 
     <logger name="ru.javaops.masterjava" level="debug"/>
+    <logger name="org.skife.jdbi" level="trace"/>
 
     <root level="info">
         <appender-ref ref="console"/>
