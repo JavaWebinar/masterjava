@@ -139,4 +139,5 @@ mvn dependency:analyze
 
 ## Замечания:
 - 1: при вставке вам помогут JDBI аннотации `@BindBean` и `@BatchChunkSize`
-- 2: чтобы при Batch вставке не нагружать базу вызовами `nextval` можно id генерить самостоятельно (используя `ALTER SEQUENCE`). При этом результат `int[]` в insertBatch возвращается с тем же размером, что и `List<User>`
+- 2: чтобы при Batch вставке не нагружать базу вызовами `nextval` можно id генерить самостоятельно (используя `ALTER SEQUENCE`). 
+- 3: без `@GetGeneratedKeys` результат `int[]` в insertBatch возвращается с тем же размером, что и `List<User>`
