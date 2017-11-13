@@ -21,8 +21,9 @@ mvn org.codehaus.cargo:cargo-maven2-plugin:run
 ```
 [URL to Upload](http://localhost:8080/upload)
 
+**ВНИМАНИЕ! перед накаткой патча создайте каталог `web\webapp\src`**
 #### 5_2_HW4_webapp_users.patch
-**!! Перед применением патча создате каталог `web\webapp\src`**
+
 #### 5_3_HW4_already_present.patch
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [Вставка в несколько потоков](https://drive.google.com/file/d/0B9Ye2auQ_NsFek5PYTdQbjBlUU0)
 #### 5_4_HW4_parallel.patch
