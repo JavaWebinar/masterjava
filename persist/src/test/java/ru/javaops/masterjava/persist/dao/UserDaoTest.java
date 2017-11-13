@@ -39,4 +39,11 @@ public class UserDaoTest extends AbstractDaoTest<UserDao> {
         dao.insertBatch(FIST5_USERS, 3);
         Assert.assertEquals(5, dao.getWithLimit(100).size());
     }
+
+    @Test
+    public void getSeqAndSkip() throws Exception {
+        int seq1 = dao.getSeqAndSkip(5);
+        int seq2 = dao.getSeqAndSkip(1);
+        Assert.assertEquals(5, seq2 - seq1);
+    }
 }

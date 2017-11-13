@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.thymeleaf.context.WebContext;
-import ru.javaops.masterjava.persist.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -44,11 +43,11 @@ public class UploadServlet extends HttpServlet {
             } else {
                 Part filePart = req.getPart("fileToUpload");
                 try (InputStream is = filePart.getInputStream()) {
-                    List<User> alreadyPresentUsers = userProcessor.process(is, chunkSize);
-                    log.info("Already present in DB " + alreadyPresentUsers.size() + " users");
+                    List<UserProcessor.FailedChunk> failed = userProcessor.process(is, chunkSize);
+                    log.info("Failed users: " + failed);
                     final WebContext webContext =
                             new WebContext(req, resp, req.getServletContext(), req.getLocale(),
-                                    ImmutableMap.of("users", alreadyPresentUsers));
+                                    ImmutableMap.of("users", failed));
                     engine.process("result", webContext, resp.getWriter());
                     return;
                 }
