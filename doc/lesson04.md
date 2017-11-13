@@ -135,3 +135,6 @@ mvn dependency:analyze
 - дополнительный материал:
   - [Speed up insertion performance in PostgreSQL](http://stackoverflow.com/a/12207237/548473)
   - [COPY — копировать данные между файлом и таблицей](https://postgrespro.ru/docs/postgrespro/9.6/sql-copy)
+
+### Optional2
+- сделайте обработку `InterruptedException/ExecutionException`, вернув ошибку в диапазоне (начальный-конечный `email`)
