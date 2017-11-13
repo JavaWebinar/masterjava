@@ -1,5 +1,8 @@
 package ru.javaops.masterjava.upload;
 
+import com.google.common.collect.ImmutableMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.thymeleaf.context.WebContext;
 import ru.javaops.masterjava.persist.model.User;
 
@@ -19,33 +22,48 @@ import static ru.javaops.masterjava.common.web.ThymeleafListener.engine;
 @WebServlet(urlPatterns = "/", loadOnStartup = 1)
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10) //10 MB in memory limit
 public class UploadServlet extends HttpServlet {
+    private static final Logger log = LoggerFactory.getLogger(UploadServlet.class);
+    private static final int CHUNK_SIZE = 2000;
 
     private final UserProcessor userProcessor = new UserProcessor();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        final WebContext webContext = new WebContext(req, resp, req.getServletContext(), req.getLocale());
-        engine.process("upload", webContext, resp.getWriter());
+        out(req, resp, "", CHUNK_SIZE);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        final WebContext webContext = new WebContext(req, resp, req.getServletContext(), req.getLocale());
-
+        String message;
+        int chunkSize = CHUNK_SIZE;
         try {
 //            http://docs.oracle.com/javaee/6/tutorial/doc/glraq.html
-            Part filePart = req.getPart("fileToUpload");
-            if (filePart.getSize() == 0) {
-                throw new IllegalStateException("Upload file have not been selected");
-            }
-            try (InputStream is = filePart.getInputStream()) {
-                List<User> users = userProcessor.process(is);
-                webContext.setVariable("users", users);
-                engine.process("result", webContext, resp.getWriter());
+            chunkSize = Integer.parseInt(req.getParameter("chunkSize"));
+            if (chunkSize < 1) {
+                message = "Chunk Size must be > 1";
+            } else {
+                Part filePart = req.getPart("fileToUpload");
+                try (InputStream is = filePart.getInputStream()) {
+                    List<User> users = userProcessor.process(is, chunkSize);
+                    log.info("Successfully uploaded " + users.size() + " users");
+                    final WebContext webContext =
+                            new WebContext(req, resp, req.getServletContext(), req.getLocale(),
+                                    ImmutableMap.of("users", users));
+                    engine.process("result", webContext, resp.getWriter());
+                    return;
+                }
             }
         } catch (Exception e) {
-            webContext.setVariable("exception", e);
-            engine.process("exception", webContext, resp.getWriter());
+            log.info(e.getMessage(), e);
+            message = e.toString();
         }
+        out(req, resp, message, chunkSize);
+    }
+
+    private void out(HttpServletRequest req, HttpServletResponse resp, String message, int chunkSize) throws IOException {
+        resp.setCharacterEncoding("utf-8");
+        final WebContext webContext = new WebContext(req, resp, req.getServletContext(), req.getLocale(),
+                ImmutableMap.of("message", message, "chunkSize", chunkSize));
+        engine.process("upload", webContext, resp.getWriter());
     }
 }

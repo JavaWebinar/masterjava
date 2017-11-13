@@ -1,12 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Upload XML</title>
 </head>
 <body>
 <form action="" method="post" enctype="multipart/form-data">
+    <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+    <h2 th:if="!${message.isEmpty()}" th:text="${message}">Message</h2>
     <h3>Select xml file to upload</h3>
     <p>
-        <input type="file" name="fileToUpload" id="fileToUpload"><br/>
+        <label for="chunkSize">Chunk Size:</label>
+        <!--/*@thymesVar id="chunkSize" type="java.lang.Integer"*/-->
+        <input type="number" name="chunkSize" id="chunkSize" th:value="${chunkSize}" required/><br/><br/>
+        <input type="file" name="fileToUpload" id="fileToUpload" required><br/>
     </p>
     <p>
         <input type="submit" value="Upload" name="submit">
