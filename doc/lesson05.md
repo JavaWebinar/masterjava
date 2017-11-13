@@ -36,7 +36,9 @@ mvn org.codehaus.cargo:cargo-maven2-plugin:run
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZ3VZMlFITkk0LXM">Конфигурирование приложения</a>
 **ВНИМАНИЕ! перед накаткой патча создейте в `common` каталог `\src` , иначе патч промахивается (от корня `common\src`).**
 #### 5_6_typesafe_config.patch
-> Не забудте положить `persist.conf` в `/apps/masterjava/config` (или убрать `required` из `persist\src\main\resources\persist.conf`) 
+> Перенес `compile/runtime` транзитивные зависимости из `parent` в `common`. Таким образом мы можен наследоваться от `parent` и не тянуть при этом все общие jar библиотеки
+
+**ВНИМАНИЕ!! Не забудте положить `persist.conf` в `/apps/masterjava/config` (или убрать `required` из `persist\src\main\resources\persist.conf`)**
 
 - <a href="http://springtips.blogspot.ru/">Переопределение занчений в конфигурации в Spring</a>. 
 - <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html#howto-change-configuration-depending-on-the-environment">Встроенные профили Spring Boot</a>
