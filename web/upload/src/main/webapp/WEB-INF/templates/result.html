@@ -7,7 +7,7 @@
 <h4><a href="">Upload XML</a></h4>
 <h3>Failed users</h3>
 <ul>
-    <!--/*@thymesVar id="users" type="java.util.List<ru.javaops.masterjava.upload.UserProcessor$FailedChunk>"*/-->
+    <!--/*@thymesVar id="users" type="java.util.List<ru.javaops.masterjava.upload.UserProcessor.FailedMails>"*/-->
     <li th:each="user: ${users}" th:text="${user}"></li>
 </ul>
 </body>
