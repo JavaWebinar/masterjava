@@ -1,22 +1,15 @@
 package ru.javaops.masterjava.persist.model;
 
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 abstract public class BaseEntity {
-    protected BaseEntity() {
-    }
 
-    protected BaseEntity(Integer id) {
-        this.id = id;
-    }
-
+    @Getter
+    @Setter
     protected Integer id;
-
-    public Integer getId() {
-        return id;
-    }
-
-    protected void setId(Integer id) {
-        this.id = id;
-    }
 
     public boolean isNew() {
         return id == null;
