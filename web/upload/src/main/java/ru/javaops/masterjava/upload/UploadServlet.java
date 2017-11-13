@@ -44,11 +44,11 @@ public class UploadServlet extends HttpServlet {
             } else {
                 Part filePart = req.getPart("fileToUpload");
                 try (InputStream is = filePart.getInputStream()) {
-                    List<User> users = userProcessor.process(is, chunkSize);
-                    log.info("Successfully uploaded " + users.size() + " users");
+                    List<User> alreadyPresentUsers = userProcessor.process(is, chunkSize);
+                    log.info("Already present in DB " + alreadyPresentUsers.size() + " users");
                     final WebContext webContext =
                             new WebContext(req, resp, req.getServletContext(), req.getLocale(),
-                                    ImmutableMap.of("users", users));
+                                    ImmutableMap.of("users", alreadyPresentUsers));
                     engine.process("result", webContext, resp.getWriter());
                     return;
                 }
