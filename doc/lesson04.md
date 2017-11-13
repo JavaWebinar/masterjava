@@ -136,3 +136,7 @@ mvn dependency:analyze
 - дополнительный материал:
   - [Speed up insertion performance in PostgreSQL](http://stackoverflow.com/a/12207237/548473)
   - [COPY — копировать данные между файлом и таблицей](https://postgrespro.ru/docs/postgrespro/9.6/sql-copy)
+
+## Замечания:
+- 1: при вставке вам помогут JDBI аннотации `@BindBean` и `@BatchChunkSize`
+- 2: чтобы при Batch вставке не нагружать базу вызовами `nextval` можно id генерить самостоятельно (используя `ALTER SEQUENCE`). При этом результат `int[]` в insertBatch возвращается с тем же размером, что и `List<User>`
