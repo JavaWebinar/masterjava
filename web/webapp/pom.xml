@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>persist</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
