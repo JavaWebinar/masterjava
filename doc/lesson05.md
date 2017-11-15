@@ -2,11 +2,6 @@
 
 ## [Материалы занятия](https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFei05cGNKbEM3eG8) (скачать все патчи можно через Download папки patch)
 
-#### 5_0_fix_HW3_jaxb_stax.patch
-> - Fix `upload` finalName
-> - Добавил `fileSizeThreshold` в `UploadServlet`
-> - Рефакторинг `JaxbParser` и реализация `UserProcessor` через StAX + JAXB ([HW3 Optional, пункт 2](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson03.md#optional))
-
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW4
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. [Сохранение в базу в batch-моде с обработкой конфликтов](https://drive.google.com/file/d/0B9Ye2auQ_NsFZEJwR2ZqMEdVRG8)
@@ -29,7 +24,7 @@ mvn org.codehaus.cargo:cargo-maven2-plugin:run
 #### 5_4_HW4_parallel.patch
 > Fix: в `UserProcessor.process` нельзя делать `85:  chunk.clean()`, тк этот список асинхронно используется для вставки.
 
-## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Рефакторинг](https://drive.google.com/open?id=1VNKqKrIhl4qQEkm8uIwnHuC6aAQnfR63)
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Рефакторинг](https://drive.google.com/open?id=1IYCUi8bPbP0FTp_Nylzh8Ssbu-rXahVX)
 #### 5_5_HW4_parallel2.patch
 
 ----------------
