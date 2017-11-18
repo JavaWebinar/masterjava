@@ -22,6 +22,7 @@ mvn org.codehaus.cargo:cargo-maven2-plugin:run
 #### 5_3_HW4_already_present.patch
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [Вставка в несколько потоков](https://drive.google.com/file/d/0B9Ye2auQ_NsFek5PYTdQbjBlUU0)
 #### 5_4_HW4_parallel.patch
+**Внимание! в postgres 10 с squence могут быть проблемы**
 > Fix: в `UserProcessor.process` нельзя делать `85:  chunk.clean()`, тк этот список асинхронно используется для вставки.
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Рефакторинг](https://drive.google.com/open?id=1IYCUi8bPbP0FTp_Nylzh8Ssbu-rXahVX)
