@@ -1,0 +1,31 @@
+<Payload xmlns="http://javaops.ru"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://javaops.ru payload.xsd">
+
+    <Projects>
+        <Project name="topjava">
+            <description>Topjava</description>
+            <Group name="topjava06" type="FINISHED"/>
+            <Group name="topjava07" type="FINISHED"/>
+            <Group name="topjava08" type="CURRENT"/>
+        </Project>
+        <Project name="masterjava">
+            <description>Masterjava</description>
+            <Group name="masterjava01" type="CURRENT"/>
+        </Project>
+    </Projects>
+    <Cities>
+        <City id="spb">Санкт-Петербург</City>
+        <City id="mow">Москва</City>
+        <City id="kiv">Киев</City>
+        <City id="mnsk">Минск</City>
+    </Cities>
+    <Users>
+        <User flag="active" city="kiv" email="gmail@gmail.com" groupRefs="topjava07 masterjava01">Full Name</User>
+        <User flag="superuser" city="spb" email="admin@javaops.ru" groupRefs="topjava07 topjava08 masterjava01">Admin</User>
+        <User flag="deleted" city="bad1" email="deleted@yandex.ru">Deleted</User>
+        <User flag="active" city="mow" email="user1@gmail.com" groupRefs="masterjava01 topjava06">User1</User>
+        <User flag="active" city="bad2" email="user2@yandex.ru" groupRefs="masterjava01">User2</User>
+        <User flag="active" city="mnsk" email="user3@yandex.ru" groupRefs="masterjava01">User3</User>
+    </Users>
+</Payload>
