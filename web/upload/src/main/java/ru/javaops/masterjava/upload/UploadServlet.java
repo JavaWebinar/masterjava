@@ -23,7 +23,7 @@ import static ru.javaops.masterjava.common.web.ThymeleafListener.engine;
 public class UploadServlet extends HttpServlet {
     private static final int CHUNK_SIZE = 2000;
 
-    private final UserProcessor userProcessor = new UserProcessor();
+    private final PayloadProcessor payloadProcessor = new PayloadProcessor();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -42,7 +42,7 @@ public class UploadServlet extends HttpServlet {
             } else {
                 Part filePart = req.getPart("fileToUpload");
                 try (InputStream is = filePart.getInputStream()) {
-                    List<UserProcessor.FailedEmails> failed = userProcessor.process(is, chunkSize);
+                    List<PayloadProcessor.FailedEmails> failed = payloadProcessor.process(is, chunkSize);
                     log.info("Failed users: " + failed);
                     final WebContext webContext =
                             new WebContext(req, resp, req.getServletContext(), req.getLocale(),
