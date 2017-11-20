@@ -7,6 +7,8 @@ import ru.javaops.masterjava.persist.model.type.UserFlag;
 
 import java.util.List;
 
+import static ru.javaops.masterjava.persist.CityTestData.*;
+
 public class UserTestData {
     public static User ADMIN;
     public static User DELETED;
@@ -17,12 +19,15 @@ public class UserTestData {
     public static List<User> FIST5_USERS;
 
     public static void init() {
-        ADMIN = new User("Admin", "admin@javaops.ru", UserFlag.superuser, null);
-        DELETED = new User("Deleted", "deleted@yandex.ru", UserFlag.deleted, null);
-        FULL_NAME = new User("Full Name", "gmail@gmail.com", UserFlag.active, null);
-        USER1 = new User("User1", "user1@gmail.com", UserFlag.active, null);
-        USER2 = new User("User2", "user2@yandex.ru", UserFlag.active, null);
-        USER3 = new User("User3", "user3@yandex.ru", UserFlag.active, null);
+        CityTestData.init();
+        CityTestData.setUp();
+
+        ADMIN = new User("Admin", "admin@javaops.ru", UserFlag.superuser, SPB.getRef());
+        DELETED = new User("Deleted", "deleted@yandex.ru", UserFlag.deleted, SPB.getRef());
+        FULL_NAME = new User("Full Name", "gmail@gmail.com", UserFlag.active, KIEV.getRef());
+        USER1 = new User("User1", "user1@gmail.com", UserFlag.active, MOSCOW.getRef());
+        USER2 = new User("User2", "user2@yandex.ru", UserFlag.active, KIEV.getRef());
+        USER3 = new User("User3", "user3@yandex.ru", UserFlag.active, MINSK.getRef());
         FIST5_USERS = ImmutableList.of(ADMIN, DELETED, FULL_NAME, USER1, USER2);
     }
 
