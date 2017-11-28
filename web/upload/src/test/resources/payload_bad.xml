@@ -21,7 +21,7 @@
         <City id="mnsk">Минск</City>
     </Cities>
     <Users>
-        <User flag="active" city="kiv" email="gmail@gmail.com" groupRefs="topjava07 masterjava01">Full Name</User>
+        <User flag="active" city="kiv" email="gmail@gmail.com" groupRefs="topjava07 masterjava01 bad_group">Full Name</User>
         <User flag="superuser" city="spb" email="admin@javaops.ru" groupRefs="topjava07 topjava08 masterjava01">Admin</User>
         <User flag="deleted" city="bad1" email="deleted@yandex.ru">Deleted</User>
         <User flag="active" city="mow" email="user1@gmail.com" groupRefs="masterjava01 topjava06">User1</User>

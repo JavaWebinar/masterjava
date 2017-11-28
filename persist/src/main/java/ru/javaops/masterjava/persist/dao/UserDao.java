@@ -55,11 +55,11 @@ public abstract class UserDao implements AbstractDao {
     public abstract int[] insertBatch(@BindBean List<User> users, @BatchChunkSize int chunkSize);
 
 
-    public List<String> insertAndGetConflictEmails(List<User> users) {
+    public List<User> insertAndGetConflictEmails(List<User> users) {
         int[] result = insertBatch(users, users.size());
         return IntStreamEx.range(0, users.size())
                 .filter(i -> result[i] == 0)
-                .mapToObj(index -> users.get(index).getEmail())
+                .mapToObj(users::get)
                 .toList();
     }
 }
