@@ -9,7 +9,7 @@
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFT3VocUpKSzZlRTg">Сохранение результатов отправки в DB</a>
 #### Apply 7_2_HW6_mail_history.patch
-**Добавляем таблицу `mail_hist` через миграцию: после патча просто запускаем `config_templates\sql\lb_apply.bat`**
+**Добавляем таблицу `mail_hist` через миграцию: после патча просто запускаем `\sql\lb_apply.bat`**
 
 > - В `mail_hist` удалил `body` и переименовал `date` -> `datetime`
 > - Чтобы `mail-service` не зависел от `persist` можно было сделать еще один модуль `common-persist`
