@@ -32,3 +32,16 @@ CREATE TABLE user_group (
   group_id INTEGER NOT NULL REFERENCES groups (id),
   CONSTRAINT users_group_idx UNIQUE (user_id, group_id)
 );
+
+--changeset gkislin:3
+CREATE TABLE mail_hist (
+  id      SERIAL PRIMARY KEY,
+  list_to TEXT NULL,
+  list_cc TEXT NULL,
+  subject TEXT NULL,
+  state   TEXT NOT NULL,
+  datetime    TIMESTAMP NOT NULL
+);
+
+COMMENT ON TABLE mail_hist IS 'История отправки email';
+COMMENT ON COLUMN mail_hist.datetime IS 'Время отправки';
