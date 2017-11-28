@@ -1,6 +1,7 @@
 package ru.javaops.masterjava.service.mail.persist;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import ru.javaops.masterjava.persist.DBIProvider;
 import ru.javaops.masterjava.service.mail.Addressee;
 
@@ -15,10 +16,10 @@ public class MailCaseTestData {
 
     static final List<MailCase> MAIL_CASES = ImmutableList.of(
             MailCase.of(
-                    ImmutableList.of(
+                    ImmutableSet.of(
                             new Addressee("ИмяTo1 Фамилия1 <mailTo1@ya.ru>"),
                             new Addressee("Имя2 Фамилия2 <mailTo2@ya.ru>")),
-                    ImmutableList.of(
+                    ImmutableSet.of(
                             new Addressee("ИмяCc1 Фамилия1 <mail1Cc@ya.ru>"),
                             new Addressee("ИмяCc2 Фамилия2 <mailCc2@ya.ru>")),
                     "subject1", "state1"
