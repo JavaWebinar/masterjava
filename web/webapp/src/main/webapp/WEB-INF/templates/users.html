@@ -3,25 +3,62 @@
     <meta charset="UTF-8">
     <title>Users</title>
 </head>
+<!--https://code.jquery.com/-->
+<!--http://stackoverflow.com/a/24070373/548473-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous" async>
+</script>
 <body>
-<table border="1" cellpadding="8" cellspacing="0">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Full Name</th>
-        <th>Email</th>
-        <th>Flag</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!--/*@thymesVar id="users" type="java.util.List<ru.javaops.masterjava.persist.model.User>"*/-->
-    <tr th:each="user,iter: ${users}">
-        <td th:text="${iter.count}"></td>
-        <td th:text="${user.fullName}"></td>
-        <td th:utext="${user.email}"></td>
-        <td th:text="${user.flag}"></td>
-    </tr>
-    </tbody>
-</table>
+<section>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Flag</th>
+            <th/>
+        </tr>
+        </thead>
+        <tbody>
+        <!--/*@thymesVar id="users" type="java.util.List<ru.javaops.masterjava.persist.model.User>"*/-->
+        <tr th:each="user,iter: ${users}">
+            <td th:text="${iter.count}"></td>
+            <td th:text="${user.fullName}"></td>
+            <td th:utext="${user.email}"></td>
+            <td th:text="${user.flag}"></td>
+            <td><input type="checkbox" th:value="|${user.fullName} <${user.email}>|"/></td>
+        </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <p>
+        <input id="subject" placeholder="subject" size="30">
+    </p>
+    <p>
+        <textarea id="body" placeholder="mail body" cols=75 rows=5></textarea><br/>
+    </p>
+    <p>
+        <button type="button" onclick="send()">Send</button>
+    </p>
+    <pre id="result"></pre>
+</section>
+<script type="text/javascript">
+    function send() {
+        $('#result').html("Sending ...");
+        var users = $("input:checkbox:checked").map(function () {
+            return this.value;
+        }).get();
+//        https://stackoverflow.com/a/22213543/548473
+        $.post("send", "users=" + users + "&subject=" + $("#subject").val() + "&body=" + $("#body").val())
+            .done(function (result) {
+                $('#result').html(result);
+            })
+            .fail(function (result) {
+                $('#result').html(result);
+            });
+    }
+</script>
 </body>
 </html>
