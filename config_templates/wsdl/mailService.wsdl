@@ -8,16 +8,51 @@
              name="MailServiceImplService">
     <types>
         <xs:schema targetNamespace="http://mail.javaops.ru/">
-            <xs:element name="sendMail" type="tns:sendMail"/>
-            <xs:element name="sendMailResponse" type="tns:sendMailResponse"/>
+            <xs:element name="sendToGroup" type="tns:sendToGroup"/>
+            <xs:element name="sendToGroupResponse" type="tns:sendToGroupResponse"/>
+            <xs:element name="sendBulk" type="tns:sendBulk"/>
+            <xs:element name="sendBulkResponse" type="tns:sendBulkResponse"/>
 
-            <xs:complexType name="sendMail">
+            <xs:complexType name="sendToGroup">
                 <xs:sequence>
                     <xs:element name="to" type="tns:addressee" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="cc" type="tns:addressee" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="subject" type="xs:string" minOccurs="0"/>
                     <xs:element name="body" type="xs:string" minOccurs="1"/>
                 </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="sendToGroupResponse">
+                <xs:sequence>
+                    <xs:element name="status" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="sendBulk">
+                <xs:sequence>
+                    <xs:element name="to" type="tns:addressee" maxOccurs="unbounded"/>
+                    <xs:element name="subject" type="xs:string" minOccurs="0"/>
+                    <xs:element name="body" type="xs:string" minOccurs="1"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="sendBulkResponse">
+                <xs:sequence>
+                    <xs:element name="groupResult">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="failed" type="tns:mailResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element name="failedCause" type="xs:string" minOccurs="0"/>
+                                <xs:element name="success" type="xs:int"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="mailResult">
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute type="xs:string" name="email"/>
+                    </xs:extension>
+                </xs:simpleContent>
             </xs:complexType>
 
             <xs:complexType name="addressee">
@@ -33,21 +68,43 @@
             </xs:complexType>
         </xs:schema>
     </types>
-    <message name="sendMail">
-        <part name="parameters" element="tns:sendMail"/>
+    <message name="sendToGroup">
+        <part name="parameters" element="tns:sendToGroup"/>
     </message>
-    <message name="sendMailResponse">
-        <part name="parameters" element="tns:sendMailResponse"/>
+    <message name="sendToGroupResponse">
+        <part name="parameters" element="tns:sendToGroupResponse"/>
+    </message>
+    <message name="sendBulk">
+        <part name="parameters" element="tns:sendBulk"/>
+    </message>
+    <message name="sendBulkResponse">
+        <part name="parameters" element="tns:sendBulkResponse"/>
     </message>
     <portType name="MailService">
-        <operation name="sendMail">
-            <input wsam:Action="http://mail.service.masterjava.javaops.ru/MailService/sendMailRequest" message="tns:sendMail"/>
-            <output wsam:Action="http://mail.service.masterjava.javaops.ru/MailService/sendMailResponse" message="tns:sendMailResponse"/>
+        <operation name="sendToGroup">
+            <input wsam:Action="http://mail.javaops.ru/MailService/sendToGroupRequest" message="tns:sendToGroup"/>
+            <output wsam:Action="http://mail.javaops.ru/MailService/sendToGroupResponse"
+                    message="tns:sendToGroupResponse"/>
+        </operation>
+        <operation name="sendBulk">
+            <input wsam:Action="http://mail.javaops.ru/MailService/sendBulkRequest"
+                   message="tns:sendBulk"/>
+            <output wsam:Action="http://mail.javaops.ru/MailService/sendBulkResponse"
+                    message="tns:sendBulkResponse"/>
         </operation>
     </portType>
     <binding name="MailServiceImplPortBinding" type="tns:MailService">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-        <operation name="sendMail">
+        <operation name="sendToGroup">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="sendBulk">
             <soap:operation soapAction=""/>
             <input>
                 <soap:body use="literal"/>
