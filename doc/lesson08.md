@@ -13,10 +13,16 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [Обновление WSDL](https://drive.google.com/file/d/0B9Ye2auQ_NsFWDFRYm5uNlJlNmM)
 #### Apply 3_HW7_update_wsdl.patch
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFWHdabmhJV2FUYzQ">Отправка почты из модуля `webapp`</a>
+> Убрал обработку эксепшенов в `MailWSClient` (есть в `SendServlet`) и заменил `$.ajax` на `$.post`
+
 #### Apply 4_HW7_webapp.patch
+
+- [jQuery.post() done and success](https://stackoverflow.com/a/22213543/548473)
 
 ----
 ##  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZDdwM2ZoX0RsZEU">SOAP Exception. Выделение общей части схемы</a>
+> Удалил `GroupResult.failedCause` и сделал вместо него `WebStateException` (бросается из `MailServiceExecutor`)
+
 **ВНИМАНИЕ! перед накаткой патча создейте в `services` каталог `\common-ws` (от корня `services\common-ws`)**
 #### Apply 5_soap_exceptions.patch
 - <a href="http://blog.idrsolutions.com/2013/10/web-services-exception-handling/">Передача по SOAP Exception</a>
