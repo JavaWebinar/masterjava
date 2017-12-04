@@ -1,6 +1,7 @@
 package ru.javaops.masterjava.service.mail;
 
 import com.google.common.collect.ImmutableSet;
+import ru.javaops.web.WebStateException;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
@@ -9,7 +10,7 @@ import java.net.URL;
 
 public class MailServiceClient {
 
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main(String[] args) throws MalformedURLException, WebStateException {
         Service service = Service.create(
                 new URL("http://localhost:8080/mail/mailService?wsdl"),
                 new QName("http://mail.javaops.ru/", "MailServiceImplService"));

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://common.javaops.ru/">
+
+    <xs:element name="webStateException" nillable="true" type="faultInfo"/>
+
+    <xs:complexType name="faultInfo">
+        <xs:sequence>
+            <xs:element name="type" type="exceptionType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="exceptionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SYSTEM"/>
+            <xs:enumeration value="DATA_BASE"/>
+            <xs:enumeration value="STATE"/>
+            <xs:enumeration value="AUTHORIZATION"/>
+            <xs:enumeration value="CONFIGURATION"/>
+            <xs:enumeration value="ILLEGAL_ARGUMENT"/>
+            <xs:enumeration value="BPM"/>
+            <xs:enumeration value="FILE"/>
+            <xs:enumeration value="REPORTS"/>
+            <xs:enumeration value="EMAIL"/>
+            <xs:enumeration value="TEMPLATE"/>
+            <xs:enumeration value="ONE_C"/>
+            <xs:enumeration value="ATTACH"/>
+            <xs:enumeration value="LDAP"/>
+            <xs:enumeration value="SOAP"/>
+            <xs:enumeration value="NETWORK"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

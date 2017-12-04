@@ -20,6 +20,6 @@ public class MailResult {
 
     @Override
     public String toString() {
-        return '\'' + email + "' result '" + result + '\'';
+        return "'" + email + "' result: " + result;
     }
 }

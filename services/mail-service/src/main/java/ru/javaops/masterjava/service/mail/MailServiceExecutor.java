@@ -2,6 +2,9 @@ package ru.javaops.masterjava.service.mail;
 
 import lombok.extern.slf4j.Slf4j;
 import one.util.streamex.StreamEx;
+import ru.javaops.masterjava.ExceptionType;
+import ru.javaops.web.WebStateException;
+import ru.javaops.web.WsClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +16,10 @@ public class MailServiceExecutor {
 
     private static final String INTERRUPTED_BY_FAULTS_NUMBER = "+++ Interrupted by faults number";
     private static final String INTERRUPTED_BY_TIMEOUT = "+++ Interrupted by timeout";
-    private static final String INTERRUPTED_EXCEPTION = "+++ InterruptedException";
 
     private static final ExecutorService mailExecutor = Executors.newFixedThreadPool(8);
 
-    public static GroupResult sendBulk(final Set<Addressee> addressees, final String subject, final String body) {
+    public static GroupResult sendBulk(final Set<Addressee> addressees, final String subject, final String body) throws WebStateException {
         final CompletionService<MailResult> completionService = new ExecutorCompletionService<>(mailExecutor);
 
         List<Future<MailResult>> futures = StreamEx.of(addressees)
@@ -29,12 +31,12 @@ public class MailServiceExecutor {
             private List<MailResult> failed = new ArrayList<>();
 
             @Override
-            public GroupResult call() {
+            public GroupResult call() throws WebStateException {
                 while (!futures.isEmpty()) {
                     try {
                         Future<MailResult> future = completionService.poll(10, TimeUnit.SECONDS);
                         if (future == null) {
-                            return cancelWithFail(INTERRUPTED_BY_TIMEOUT);
+                            cancel(INTERRUPTED_BY_TIMEOUT, null);
                         }
                         futures.remove(future);
                         MailResult mailResult = future.get();
@@ -43,23 +45,27 @@ public class MailServiceExecutor {
                         } else {
                             failed.add(mailResult);
                             if (failed.size() >= 5) {
-                                return cancelWithFail(INTERRUPTED_BY_FAULTS_NUMBER);
+                                cancel(INTERRUPTED_BY_FAULTS_NUMBER, null);
                             }
                         }
                     } catch (ExecutionException e) {
-                        return cancelWithFail(e.getCause().toString());
+                        cancel(null, e.getCause());
                     } catch (InterruptedException e) {
-                        return cancelWithFail(INTERRUPTED_EXCEPTION);
+                        cancel(INTERRUPTED_BY_TIMEOUT, null);
                     }
                 }
-                GroupResult groupResult = new GroupResult(success, failed, null);
+                GroupResult groupResult = new GroupResult(success, failed);
                 log.info("groupResult: {}", groupResult);
                 return groupResult;
             }
 
-            private GroupResult cancelWithFail(String cause) {
+            private void cancel(String cause, Throwable t) throws WebStateException {
                 futures.forEach(f -> f.cancel(true));
-                return new GroupResult(success, failed, cause);
+                if (cause != null) {
+                    throw new WebStateException(cause, ExceptionType.EMAIL);
+                } else {
+                    throw WsClient.getWebStateException(t, ExceptionType.EMAIL);
+                }
             }
         }.call();
     }

@@ -3,11 +3,14 @@
              xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns:tns="http://mail.javaops.ru/"
              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:common="http://common.javaops.ru/"
              xmlns="http://schemas.xmlsoap.org/wsdl/"
              targetNamespace="http://mail.javaops.ru/"
              name="MailServiceImplService">
     <types>
         <xs:schema targetNamespace="http://mail.javaops.ru/">
+            <xs:import namespace="http://common.javaops.ru/" schemaLocation="common.xsd"/>
+
             <xs:element name="sendToGroup" type="tns:sendToGroup"/>
             <xs:element name="sendToGroupResponse" type="tns:sendToGroupResponse"/>
             <xs:element name="sendBulk" type="tns:sendBulk"/>
@@ -40,7 +43,6 @@
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="failed" type="tns:mailResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                                <xs:element name="failedCause" type="xs:string" minOccurs="0"/>
                                 <xs:element name="success" type="xs:int"/>
                             </xs:sequence>
                         </xs:complexType>
@@ -80,17 +82,25 @@
     <message name="sendBulkResponse">
         <part name="parameters" element="tns:sendBulkResponse"/>
     </message>
+    <message name="WebStateException">
+        <part name="fault" element="common:webStateException"/>
+    </message>
+
     <portType name="MailService">
         <operation name="sendToGroup">
             <input wsam:Action="http://mail.javaops.ru/MailService/sendToGroupRequest" message="tns:sendToGroup"/>
             <output wsam:Action="http://mail.javaops.ru/MailService/sendToGroupResponse"
                     message="tns:sendToGroupResponse"/>
+            <fault wsam:Action="http://mail.javaops.ru/MailService/sendBulkMail/Fault/WebStateException"
+                   message="tns:WebStateException" name="WebStateException" />
         </operation>
         <operation name="sendBulk">
             <input wsam:Action="http://mail.javaops.ru/MailService/sendBulkRequest"
                    message="tns:sendBulk"/>
             <output wsam:Action="http://mail.javaops.ru/MailService/sendBulkResponse"
                     message="tns:sendBulkResponse"/>
+            <fault wsam:Action="http://mail.javaops.ru/MailService/sendBulkMail/Fault/WebStateException"
+                   message="tns:WebStateException" name="WebStateException" />
         </operation>
     </portType>
     <binding name="MailServiceImplPortBinding" type="tns:MailService">
@@ -103,6 +113,9 @@
             <output>
                 <soap:body use="literal"/>
             </output>
+            <fault name="WebStateException">
+                <soap:fault name="WebStateException" use="literal"/>
+            </fault>
         </operation>
         <operation name="sendBulk">
             <soap:operation soapAction=""/>
@@ -112,6 +125,9 @@
             <output>
                 <soap:body use="literal"/>
             </output>
+            <fault name="WebStateException">
+                <soap:fault name="WebStateException" use="literal"/>
+            </fault>
         </operation>
     </binding>
     <service name="MailServiceImplService">

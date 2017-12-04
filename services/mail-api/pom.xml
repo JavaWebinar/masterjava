@@ -21,6 +21,7 @@
                 <directory>${masterjava.config}</directory>
                 <includes>
                     <include>wsdl/mailService.wsdl</include>
+                    <include>wsdl/common.xsd</include>
                 </includes>
             </resource>
         </resources>
@@ -29,7 +30,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>common-ws</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
