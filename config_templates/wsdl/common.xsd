@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--http://stackoverflow.com/questions/17295588/xmlntns-and-targetnamespace-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://common.javaops.ru/"
            targetNamespace="http://common.javaops.ru/">
 
-    <xs:element name="webStateException" nillable="true" type="faultInfo"/>
+    <xs:element name="webStateException" nillable="true" type="tns:faultInfo"/>
 
     <xs:complexType name="faultInfo">
         <xs:sequence>
-            <xs:element name="type" type="exceptionType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="type" type="tns:exceptionType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 

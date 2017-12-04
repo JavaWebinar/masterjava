@@ -3,8 +3,11 @@ package ru.javaops.masterjava;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import javax.xml.bind.annotation.XmlType;
+
 @Getter
 @AllArgsConstructor
+@XmlType(namespace = "http://common.javaops.ru/")
 public enum ExceptionType {
     SYSTEM("Системная ошибка"),
     DATA_BASE("Ошибка базы данных"),
