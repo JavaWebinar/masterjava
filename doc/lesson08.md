@@ -27,7 +27,9 @@
 #### Apply 5_soap_exceptions.patch
 - <a href="http://blog.idrsolutions.com/2013/10/web-services-exception-handling/">Передача по SOAP Exception</a>
 
-## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. [Коррекция схемы](https://drive.google.com/file/d/0B9Ye2auQ_NsFZ1FmODdWcmlKdUk)  
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. [Коррекция схемы](https://drive.google.com/file/d/0B9Ye2auQ_NsFZ1FmODdWcmlKdUk)
+> Анологично `Addressee` поправил `MailResult`
+
 #### Apply 6_fix_wsdl_and_schema.patch
 
 --------------
