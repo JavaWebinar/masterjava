@@ -21,31 +21,24 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/webapp</directory>
-                        </resource>
-                        <resource>
-                            <directory>${masterjava.config}</directory>
-                            <includes>
-                                <include>version.html</include>
-                            </includes>
-                            <filtering>true</filtering>
-                        </resource>
-                        <resource>
-                            <directory>${masterjava.config}</directory>
-                            <includes>
-                                <include>wsdl/mailService.wsdl</include>
-                                <include>wsdl/common.xsd</include>
-                            </includes>
-                            <targetPath>WEB-INF</targetPath>
-                        </resource>
-                    </webResources>
-                </configuration>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <copy todir="target/mail/WEB-INF/wsdl">
+                                    <!--https://ant.apache.org/manual/Types/selectors.html-->
+                                    <fileset dir="${masterjava.config}/wsdl" includes="mailService.wsdl,common.xsd"/>
+                                </copy>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
