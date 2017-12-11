@@ -24,7 +24,7 @@ public class SendServlet extends HttpServlet {
             String users = req.getParameter("users");
             String subject = req.getParameter("subject");
             String body = req.getParameter("body");
-            GroupResult groupResult = MailWSClient.sendBulk(MailWSClient.split(users), subject, body);
+            GroupResult groupResult = MailWSClient.sendBulk(MailWSClient.split(users), subject, body, null);
             result = groupResult.toString();
             log.info("Processing finished with result: {}", result);
         } catch (Exception e) {

@@ -4,6 +4,7 @@
              xmlns:tns="http://mail.javaops.ru/"
              xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:common="http://common.javaops.ru/"
+             xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
              xmlns="http://schemas.xmlsoap.org/wsdl/"
              targetNamespace="http://mail.javaops.ru/"
              name="MailServiceImplService">
@@ -22,6 +23,7 @@
                     <xs:element name="cc" type="tns:addressee" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="subject" type="xs:string" minOccurs="0"/>
                     <xs:element name="body" type="xs:string" minOccurs="1"/>
+                    <xs:element name="attachments" type="tns:attachment" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="sendToGroupResponse">
@@ -35,6 +37,7 @@
                     <xs:element name="to" type="tns:addressee" maxOccurs="unbounded"/>
                     <xs:element name="subject" type="xs:string" minOccurs="0"/>
                     <xs:element name="body" type="xs:string" minOccurs="1"/>
+                    <xs:element name="attachments" type="tns:attachment" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="sendBulkResponse">
@@ -67,6 +70,13 @@
 
             <xs:complexType name="sendMailResponse">
                 <xs:sequence/>
+            </xs:complexType>
+
+            <xs:complexType name="attachment">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0"/>
+                    <xs:element name="dataHandler" xmime:expectedContentTypes="application/octet-stream" type="xs:base64Binary"/>
+                </xs:sequence>
             </xs:complexType>
         </xs:schema>
     </types>
