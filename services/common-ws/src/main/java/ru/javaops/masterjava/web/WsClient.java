@@ -5,10 +5,13 @@ import ru.javaops.masterjava.ExceptionType;
 import ru.javaops.masterjava.config.Configs;
 
 import javax.xml.namespace.QName;
+import javax.xml.ws.Binding;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebServiceFeature;
+import javax.xml.ws.handler.Handler;
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 
 public class WsClient<T> {
@@ -44,6 +47,13 @@ public class WsClient<T> {
         Map<String, Object> requestContext = ((BindingProvider) port).getRequestContext();
         requestContext.put(BindingProvider.USERNAME_PROPERTY, user);
         requestContext.put(BindingProvider.PASSWORD_PROPERTY, password);
+    }
+
+    public static <T> void setHandler(T port, Handler handler) {
+        Binding binding = ((BindingProvider) port).getBinding();
+        List<Handler> handlerList = binding.getHandlerChain();
+        handlerList.add(handler);
+        binding.setHandlerChain(handlerList);
     }
 
     public static WebStateException getWebStateException(Throwable t, ExceptionType type) {

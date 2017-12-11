@@ -1,6 +1,7 @@
 package ru.javaops.masterjava.service.mail.util;
 
 import lombok.AllArgsConstructor;
+import org.apache.commons.io.input.CloseShieldInputStream;
 import ru.javaops.masterjava.service.mail.Attachment;
 
 import javax.activation.DataHandler;
@@ -14,6 +15,7 @@ public class Attachments {
         return new Attachment(name, new DataHandler(new InputStreamDataSource(inputStream)));
     }
 
+    //    http://stackoverflow.com/questions/2830561/how-to-convert-an-inputstream-to-a-datahandler
     //    http://stackoverflow.com/a/10783565/548473
     @AllArgsConstructor
     private static class InputStreamDataSource implements DataSource {
@@ -21,12 +23,7 @@ public class Attachments {
 
         @Override
         public InputStream getInputStream() throws IOException {
-            if (inputStream == null) {
-                throw new IOException("Second getInputStream() call is not supported");
-            }
-            InputStream res = inputStream;
-            inputStream = null;
-            return res;
+            return new CloseShieldInputStream(inputStream);
         }
 
         @Override
