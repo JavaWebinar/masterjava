@@ -1,4 +1,4 @@
-package ru.javaops.web;
+package ru.javaops.masterjava.web;
 
 import com.typesafe.config.Config;
 import ru.javaops.masterjava.ExceptionType;

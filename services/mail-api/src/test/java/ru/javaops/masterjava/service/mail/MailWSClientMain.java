@@ -2,7 +2,7 @@ package ru.javaops.masterjava.service.mail;
 
 import com.google.common.collect.ImmutableSet;
 import lombok.extern.slf4j.Slf4j;
-import ru.javaops.web.WebStateException;
+import ru.javaops.masterjava.web.WebStateException;
 
 @Slf4j
 public class MailWSClientMain {

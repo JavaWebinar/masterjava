@@ -9,7 +9,7 @@ import ru.javaops.masterjava.ExceptionType;
 import ru.javaops.masterjava.persist.DBIProvider;
 import ru.javaops.masterjava.service.mail.persist.MailCase;
 import ru.javaops.masterjava.service.mail.persist.MailCaseDao;
-import ru.javaops.web.WebStateException;
+import ru.javaops.masterjava.web.WebStateException;
 
 import java.util.Set;
 

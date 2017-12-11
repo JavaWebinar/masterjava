@@ -5,8 +5,8 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
 import com.google.common.io.Resources;
 import lombok.extern.slf4j.Slf4j;
-import ru.javaops.web.WebStateException;
-import ru.javaops.web.WsClient;
+import ru.javaops.masterjava.web.WebStateException;
+import ru.javaops.masterjava.web.WsClient;
 
 import javax.xml.namespace.QName;
 import java.util.Set;
