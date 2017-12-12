@@ -125,7 +125,7 @@ mvn dependency:analyze
 - <a href="https://gitlab.com/rbertoncelj/jdbi-entity-mapper">Simple EntityMapper with `@Column` support</a>
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW4
-- в модуле **upload** сохранить всех импортированных пользователей в базе (записи просто добавляются в таблицу `users`). Делать вставку группами (chunk) в [batch моде](http://jdbi.org/sql_object_api_batching/). Количестово пользователей в chunk принимать с UI как параметр
+- в модуле **upload** сохранить всех импортированных пользователей в базе (записи просто добавляются в таблицу `users`). Делать вставку группами (chunk) в [batch моде](http://jdbi.org/jdbi2/sql_object_api_batching/). Количестово пользователей в chunk принимать с UI как параметр
 - сделать отображение первых 20 пользователей в модуле **webapp**
 - добавить в таблицу `users` уникальный индекс на `email` и вставлять в базу только новых пользователей. Результат импорта: пользователи, уже присутствующие в базе ([POSTGRES: INSERT ON CONFLICT](https://habrahabr.ru/post/264281/))
 
