@@ -105,7 +105,7 @@ mvn dependency:analyze
 - <a href="http://www.mybatis.org/mybatis-3/">MyBatis</a>, <a href="http://sivalabs.in/2012/10/mybatis-tutorial-part-2-crud-operations-using-annotations/">MyBatis tutorial (CRUD)</a>
 - <a href="https://commons.apache.org/proper/commons-dbutils/">Commons DbUtils</a>, <a href="https://habrahabr.ru/post/183204/">доработка commons-dbutils</a>
 - <a href="http://stackoverflow.com/a/6258793/548473">jDBI sample</a>
-   - <a href="http://jdbi.org/">JDBI</a>
+   - <a href="http://jdbi.org/jdbi2/">JDBI</a>
    - <a href="http://zetcode.com/db/jdbi/">JDBI tutorial</a> (<a href="http://www.dropwizard.io/0.7.1/docs/manual/jdbi.html">Dropwizard JDBI</a>)
    - [Combining Spring Boot and JDBI](https://www.sitepoint.com/combining-spring-boot-and-jdbi)
 
