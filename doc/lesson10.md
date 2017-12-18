@@ -54,9 +54,10 @@
 > - Переименовал `SendServlet` в `SoapSendServlet`
 
 #### Apply 10_5_JMS.patch
-> ![Внимание](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png)  **Для того, чтобы по JNDI приложение работало с JMS скопируйте:** 
->  - **`config_templates/context.xml` в `$TOMCAT_HOME/conf`**
->  - **`$MAVEN_REPO(~/.m2)/org/apache/activemq/activemq-all/5.15.2/activemq-all-5.15.2.jar` в `$TOMCAT_HOME/lib`**
+> ![Внимание](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) **Для того, чтобы по JNDI приложение работало с JMS сконфигурируйте Tomcat:**
+> - Скопируйте
+>   - `config_templates/context.xml` в `$TOMCAT_HOME/conf`
+>   - `$MAVEN_REPO(~/.m2)/org/apache/activemq/activemq-all/5.15.2/activemq-all-5.15.2.jar` в `$TOMCAT_HOME/lib`
 
 - <a href="https://ru.wikipedia.org/wiki/Java_Message_Service">Java Message Service</a>
 - <a href="http://queues.io/">Queues</a>
