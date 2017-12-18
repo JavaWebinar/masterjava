@@ -54,7 +54,7 @@
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. [Домашнее задание. Статистика](https://drive.google.com/open?id=0B9Ye2auQ_NsFWGI0ejBZZ21Cc0k)
 #### Apply 9_8_prepare_HW9.patch
-> Поломалась конфигурация `endpoint`, в ДЗ требуется починить
+> После обновления `hosts.conf` в `masterjava.config (/apps/masterjava/config/)` поломается конфигурация `endpoint`, в ДЗ требуется починить
 
   - Сделать отдельный Handler статистики трафика веб-сервиса (в статистике только логирование)
   - Сделать авторизацию в `mailService` через `SoapServerSecurityHandler` 
