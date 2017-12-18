@@ -56,10 +56,12 @@ public abstract class SoapLoggingHandlers extends SoapBaseHandler {
         ERROR {
             private static final String REQUEST_MSG = "REQUEST_MSG";
 
+            @Override
             public void handleFault(MessageHandlerContext context) {
                 log.error("Fault SOAP request:\n" + getMessageText(((Message) context.get(REQUEST_MSG))));
             }
 
+            @Override
             public void handleMessage(MessageHandlerContext context, boolean isRequest) {
                 if (isRequest) {
                     context.put(REQUEST_MSG, context.getMessage().copy());
@@ -67,20 +69,24 @@ public abstract class SoapLoggingHandlers extends SoapBaseHandler {
             }
         },
         INFO {
+            @Override
             public void handleFault(MessageHandlerContext context) {
                 ERROR.handleFault(context);
             }
 
+            @Override
             public void handleMessage(MessageHandlerContext context, boolean isRequest) {
                 ERROR.handleMessage(context, isRequest);
                 log.info((isRequest ? "SOAP request: " : "SOAP response: ") + context.getMessage().getPayloadLocalPart());
             }
         },
         DEBUG {
+            @Override
             public void handleFault(MessageHandlerContext context) {
                 log.error("Fault SOAP message:\n" + getMessageText(context.getMessage().copy()));
             }
 
+            @Override
             public void handleMessage(MessageHandlerContext context, boolean isRequest) {
                 log.info((isRequest ? "SOAP request:\n" : "SOAP response:\n") + getMessageText(context.getMessage().copy()));
             }

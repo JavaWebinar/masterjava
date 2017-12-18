@@ -9,6 +9,7 @@ import java.util.Set;
 
 public abstract class SoapBaseHandler implements MessageHandler<MessageHandlerContext> {
 
+    @Override
     public Set<QName> getHeaders() {
         return null;
     }

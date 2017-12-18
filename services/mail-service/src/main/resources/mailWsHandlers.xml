@@ -4,5 +4,13 @@
         <handler-name>SoapLoggingHandler</handler-name>
         <handler-class>ru.javaops.masterjava.web.handler.SoapLoggingHandlers$ServerHandler</handler-class>
     </handler>
+    <handler>
+        <handler-name>SoapStatisticHandler</handler-name>
+        <handler-class>ru.javaops.masterjava.web.handler.SoapStatisticHandler</handler-class>
+    </handler>
+    <handler>
+        <handler-name>SoapStatisticHandler</handler-name>
+        <handler-class>ru.javaops.masterjava.service.mail.MailHandlers$SecurityHandler</handler-class>
+    </handler>
 </handler-chain>
 </handler-chains>
