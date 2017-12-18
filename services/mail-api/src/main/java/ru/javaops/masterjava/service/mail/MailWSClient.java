@@ -5,10 +5,8 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
 import com.google.common.io.Resources;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.event.Level;
 import ru.javaops.masterjava.web.WebStateException;
 import ru.javaops.masterjava.web.WsClient;
-import ru.javaops.masterjava.web.handler.SoapLoggingHandlers;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.soap.MTOMFeature;
@@ -18,9 +16,6 @@ import java.util.Set;
 @Slf4j
 public class MailWSClient {
     private static final WsClient<MailService> WS_CLIENT;
-    public static final String USER = "user";
-    public static final String PASSWORD = "password";
-    private static final SoapLoggingHandlers.ClientHandler LOGGING_HANDLER = new SoapLoggingHandlers.ClientHandler(Level.DEBUG);
 
     static {
         WS_CLIENT = new WsClient<>(Resources.getResource("wsdl/mailService.wsdl"),
@@ -46,14 +41,15 @@ public class MailWSClient {
     }
 
     private static MailService getPort() {
-        MailService port = WS_CLIENT.getPort(new MTOMFeature(1024));
-        WsClient.setAuth(port, USER, PASSWORD);
-        WsClient.setHandler(port, LOGGING_HANDLER);
-        return port;
+        return WS_CLIENT.getPort(new MTOMFeature(1024));
     }
 
     public static Set<Addressee> split(String addressees) {
         Iterable<String> split = Splitter.on(',').trimResults().omitEmptyStrings().split(addressees);
         return ImmutableSet.copyOf(Iterables.transform(split, Addressee::new));
+    }
+
+    public static WsClient.HostConfig getHostConfig() {
+        return WS_CLIENT.getHostConfig();
     }
 }
