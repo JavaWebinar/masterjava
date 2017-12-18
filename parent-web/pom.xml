@@ -18,6 +18,7 @@
 
     <properties>
         <maven.resources.overwrite>true</maven.resources.overwrite>
+        <activemq.version>5.15.2</activemq.version>
     </properties>
 
     <build>

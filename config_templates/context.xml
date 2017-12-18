@@ -46,4 +46,18 @@
               password="password"
               url="jdbc:postgresql://localhost:5432/masterjava"/>
 
+    <Resource name="jms/ConnectionFactory"
+              auth="Container"
+              type="org.apache.activemq.ActiveMQConnectionFactory"
+              factory="org.apache.activemq.jndi.JNDIReferenceFactory"
+              brokerURL="failover:(vm://localhost)"
+              brokerName="LocalActiveMQBroker"
+              useEmbeddedBroker="true"/>
+
+    <Resource name="jms/queue/MailQueue"
+              auth="Container"
+              type="org.apache.activemq.command.ActiveMQQueue"
+              factory="org.apache.activemq.jndi.JNDIReferenceFactory"
+              physicalName="MAIL.QUEUE"/>
+
 </Context>

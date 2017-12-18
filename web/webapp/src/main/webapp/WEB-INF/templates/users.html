@@ -45,6 +45,7 @@
     <p>
         <input type="radio" name="transport" onchange="setTransport('SOAP');" checked>SOAP<br>
         <input type="radio" name="transport" onchange="setTransport('REST');">REST<br>
+        <input type="radio" name="transport" onchange="setTransport('JMS');">JMS<br>
     </p>
     <p>
         <button type="button" onclick="send()">Send</button>
@@ -79,14 +80,14 @@
             var attach = $('#attach')[0].files[0];
             if (attach) data.append('attach', attach);
             param = {
-                url: "send",
+                url: "sendSoap",
                 data: data,
                 contentType: false,
                 processData: false
             };
-        } else if(transport === "REST"){
+        } else if (transport === "REST" || transport === "JMS") {
             param = {
-                url: "/mail/rest/send",
+                url: (transport === "REST" ? "/mail/rest/send" : "sendJms"),
                 data: "users=" + users + "&subject=" + $("#subject").val() + "&body=" + $("#body").val(),
                 contentType: "application/x-www-form-urlencoded"
             };

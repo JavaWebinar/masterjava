@@ -15,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
 
-@WebServlet("/send")
+@WebServlet("/sendSoap")
 @Slf4j
 @MultipartConfig
-public class SendServlet extends HttpServlet {
+public class SoapSendServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String result;
