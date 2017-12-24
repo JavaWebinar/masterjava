@@ -17,7 +17,7 @@
 
 ----------------------------
 
-## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. [JavaEE](https://drive.google.com/open?id=0B9Ye2auQ_NsFUU92ZFBEZmJjb2c)
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [JavaEE](https://drive.google.com/open?id=0B9Ye2auQ_NsFUU92ZFBEZmJjb2c)
 - <a href="https://ru.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition">Java Platform, Enterprise Edition</a>
 - <a href="https://habrahabr.ru/post/283290/">Холивары в комментах</a>
 - <a href="http://www.ibm.com/developerworks/websphere/techjournal/1301_stephen/1301_stephen.html">CDI</a>
@@ -25,7 +25,7 @@
 - <a href="http://tomee.apache.org/comparison.html">TomEE состав</a>
 - <a href="https://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/">Application Server statistics</a>
 
-## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. [JAX-RS](https://drive.google.com/file/d/0B9Ye2auQ_NsFeWQxTUVBSDFGMGM)
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. [JAX-RS](https://drive.google.com/file/d/0B9Ye2auQ_NsFeWQxTUVBSDFGMGM)
 #### Apply 10_3_JAX_RS.patch
 > - Обновил версию JAX-RS. См. [upgrage issue](https://github.com/jersey/jersey/issues/3664)
 > - В `users.html`
@@ -49,7 +49,7 @@
   - <a href="http://localhost:8080/mail/rest/application.wadl">mail/rest/application.wadl</a>
   - <a href="https://wadl.java.net/">wadl2java client stub generation</a>
 
-## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFMUpGRGpSVXJLVGs">JMS</a>
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFMUpGRGpSVXJLVGs">JMS</a>
 > - Вынес в `parent-web` версию ActiveMQ
 > - Переименовал `SendServlet` в `SoapSendServlet`
 
@@ -69,7 +69,7 @@
    - [When close JMS connection/sessions](http://stackoverflow.com/questions/19772082/when-should-i-close-a-jms-connection-that-was-created-in-a-stateless-session-bea)
    - [Cache JMS connections/sessions](https://developer.jboss.org/wiki/ShouldICacheJMSConnectionsAndJMSSessions)
 
-## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. [Авторизация в контейнере Tomcat](https://drive.google.com/file/d/0B9Ye2auQ_NsFcU1FU3FTQ25NNzA)
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. [Авторизация в контейнере Tomcat](https://drive.google.com/file/d/0B9Ye2auQ_NsFcU1FU3FTQ25NNzA)
 #### Apply 10_6_tomcat_auth.patch
 
 - [Realm Configuration HOW-TO](http://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html)
