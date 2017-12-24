@@ -68,7 +68,14 @@
 - <a href="https://martinsdeveloperworld.wordpress.com/2013/03/03/apache-activemq-and-tomcat/">Apache ActiveMQ and Tomcat sample</a>
    - [When close JMS connection/sessions](http://stackoverflow.com/questions/19772082/when-should-i-close-a-jms-connection-that-was-created-in-a-stateless-session-bea)
    - [Cache JMS connections/sessions](https://developer.jboss.org/wiki/ShouldICacheJMSConnectionsAndJMSSessions)
-   
+
+## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. [Авторизация в контейнере Tomcat](https://drive.google.com/file/d/0B9Ye2auQ_NsFcU1FU3FTQ25NNzA)
+#### Apply 10_6_tomcat_auth.patch
+
+- [Realm Configuration HOW-TO](http://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html)
+- [Setup your own Tomcat security realm](http://www.christianschenk.org/blog/setup-your-own-tomcat-security-realm/)
+
+
 ## Домашнее задание
 - Добавить аттачи в JAX-RS
   - [File upload example in Jersey](http://www.mkyong.com/webservices/jax-rs/file-upload-example-in-jersey) **НЕ РАБОТАЕТ!**
