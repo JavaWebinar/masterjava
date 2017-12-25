@@ -14,30 +14,26 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
 
+import static ru.javaops.masterjava.webapp.WebUtil.doAndWriteResponse;
+import static ru.javaops.masterjava.webapp.WebUtil.getNotEmptyParam;
+
 @WebServlet("/sendSoap")
 @Slf4j
-@MultipartConfig
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10, //10 MB in memory limit
+        maxFileSize = 1024 * 1024 * 25)
 public class SoapSendServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String result;
-        try {
-            log.info("Start sending");
-            req.setCharacterEncoding("UTF-8");
-            resp.setCharacterEncoding("UTF-8");
-            String users = req.getParameter("users");
+        req.setCharacterEncoding("UTF-8");
+        doAndWriteResponse(resp, () -> {
+            String users = getNotEmptyParam(req, "users");
             String subject = req.getParameter("subject");
-            String body = req.getParameter("body");
+            String body = getNotEmptyParam(req, "body");
             Part filePart = req.getPart("attach");
             GroupResult groupResult = MailWSClient.sendBulk(MailUtils.split(users), subject, body,
                     filePart == null ? null :
                             ImmutableList.of(MailUtils.getAttachment(filePart.getSubmittedFileName(), filePart.getInputStream())));
-            result = groupResult.toString();
-            log.info("Processing finished with result: {}", result);
-        } catch (Exception e) {
-            log.error("Processing failed", e);
-            result = e.toString();
-        }
-        resp.getWriter().write(result);
+            return groupResult.toString();
+        });
     }
 }
