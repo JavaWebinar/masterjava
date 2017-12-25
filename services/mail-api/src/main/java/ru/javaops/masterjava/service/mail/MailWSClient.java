@@ -1,8 +1,5 @@
 package ru.javaops.masterjava.service.mail;
 
-import com.google.common.base.Splitter;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Iterables;
 import com.google.common.io.Resources;
 import lombok.extern.slf4j.Slf4j;
 import ru.javaops.masterjava.web.WebStateException;
@@ -42,11 +39,6 @@ public class MailWSClient {
 
     private static MailService getPort() {
         return WS_CLIENT.getPort(new MTOMFeature(1024));
-    }
-
-    public static Set<Addressee> split(String addressees) {
-        Iterable<String> split = Splitter.on(',').trimResults().omitEmptyStrings().split(addressees);
-        return ImmutableSet.copyOf(Iterables.transform(split, Addressee::new));
     }
 
     public static WsClient.HostConfig getHostConfig() {
