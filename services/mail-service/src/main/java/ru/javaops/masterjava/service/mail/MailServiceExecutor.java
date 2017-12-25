@@ -1,6 +1,5 @@
 package ru.javaops.masterjava.service.mail;
 
-import com.google.common.collect.ImmutableList;
 import lombok.extern.slf4j.Slf4j;
 import one.util.streamex.StreamEx;
 import ru.javaops.masterjava.ExceptionType;
@@ -79,7 +78,7 @@ public class MailServiceExecutor {
                 mailExecutor.submit(() -> {
                     try {
                         MailSender.sendTo(addressee, mailObject.getSubject(), mailObject.getBody(),
-                                ImmutableList.of(MailUtils.getAttachment(mailObject.getAttachName(), mailObject.getAttachData())));
+                                MailUtils.getAttachments(mailObject.getAttachments()));
                     } catch (WebStateException e) {
                         // already logged
                     }
