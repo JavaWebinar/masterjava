@@ -9,6 +9,7 @@
 
     <name>Services</name>
     <modules>
+        <module>akka-remote</module>
         <module>common-ws</module>
         <module>mail-api</module>
         <module>mail-service</module>
