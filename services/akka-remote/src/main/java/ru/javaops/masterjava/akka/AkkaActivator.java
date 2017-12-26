@@ -1,8 +1,6 @@
 package ru.javaops.masterjava.akka;
 
-import akka.actor.ActorSystem;
-import akka.actor.TypedActor;
-import akka.actor.TypedProps;
+import akka.actor.*;
 import akka.japi.Creator;
 import akka.util.Timeout;
 import lombok.extern.slf4j.Slf4j;
@@ -33,9 +31,19 @@ public class AkkaActivator {
                 new TypedProps<T>(typedClass, creator).withTimeout(new Timeout(Duration.create(20, TimeUnit.SECONDS))), name);
     }
 
+    public <T> ActorRef startActor(Class<T> actorClass, String name) {
+        log.info("Start AKKA actor: {}", name);
+        return system.actorOf(Props.create(actorClass), name);
+    }
+
     public <T> T getTypedRef(Class<T> typedClass, String path) {
         log.info("Get typed reference with path={}", path);
         return TypedActor.get(system).typedActorOf(new TypedProps<T>(typedClass), system.actorFor(path));
+    }
+
+    public ActorRef getActorRef(String path) {
+        log.info("Get actor reference with path={}", path);
+        return system.actorFor(path);
     }
 
     public ExecutionContext getExecutionContext() {

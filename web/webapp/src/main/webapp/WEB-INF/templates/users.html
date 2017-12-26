@@ -47,6 +47,7 @@
         <input type="radio" name="transport" onchange="setUrl('/mail/rest/send');">REST<br>
         <input type="radio" name="transport" onchange="setUrl('sendJms');">JMS<br>
         <input type="radio" name="transport" onchange="setUrl('sendAkkaTyped');">AKKA Typed<br>
+        <input type="radio" name="transport" onchange="setUrl('sendAkkaUntyped')">AKKA Untyped<br>
     </p>
     <p>
         <button type="button" onclick="send()">Send</button>
