@@ -38,6 +38,11 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>akka-remote</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
