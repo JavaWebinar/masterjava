@@ -26,7 +26,7 @@ public class MailSender {
     }
 
     static String sendToGroup(Set<Addressee> to, Set<Addressee> cc, String subject, String body, List<Attachment> attachments) throws WebStateException {
-        log.info("Send mail to \'" + to + "\' cc \'" + cc + "\' subject \'" + subject + (log.isDebugEnabled() ? "\nbody=" + body : ""));
+        log.info("Send mail to \'" + to + "\' cc \'" + cc + "\' subject \'" + subject + '\'' + (log.isDebugEnabled() ? "\nbody=" + body : ""));
         String state = MailResult.OK;
         try {
             val email = MailConfig.createHtmlEmail();

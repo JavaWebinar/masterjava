@@ -19,6 +19,20 @@ import static com.google.common.base.Preconditions.checkArgument;
 @Slf4j
 public class WebUtil {
 
+    public static void doAsync(HttpServletResponse resp, Functions.RunnableEx doer) throws IOException {
+        resp.setCharacterEncoding("UTF-8");
+        try {
+            log.info("Start asynchronous processing");
+            doer.run();
+            log.info("Asynchronous processing running ...");
+        } catch (Exception e) {
+            log.error("Asynchronous processing failed", e);
+            String message = e.getMessage();
+            String result = (message != null) ? message : e.getClass().getName();
+            resp.getWriter().write(result);
+        }
+    }
+
     public static void doAndWriteResponse(HttpServletResponse resp, Functions.SupplierEx<String> doer) throws IOException {
         log.info("Start sending");
         resp.setCharacterEncoding("UTF-8");
