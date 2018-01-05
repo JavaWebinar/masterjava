@@ -15,13 +15,13 @@
 - использование в проекте [Guava](https://github.com/google/guava/wiki), [Thymleaf](http://www.thymeleaf.org/), [Lombok](https://projectlombok.org/), [StreamEx](https://github.com/amaembo/streamex), 
 [Typesafe Config](https://github.com/typesafehub/config), [Java Microbenchmark JMH](http://openjdk.java.net/projects/code-tools/jmh)
 
-## 17.10: [Занятие 1: Многопоточность](https://github.com/JavaOPs/masterjava) 
+## [Занятие 1: Многопоточность](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson01.md) 
 - Вступление. Многопоточность и параллельность
 - Структура памяти Java. Ленивая инициализация
 - Реализация многопоточности в Java
 - Реализация многопоточной отправки писем. Execution Framework
 
-## 24.10: Занятие 2
+## [Занятие 2](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson02.md)
 - Разбор ДЗ (многопоточная реализация умножения матриц)
 - [Java Microbenchmark JMH](http://openjdk.java.net/projects/code-tools/jmh/) (от Алексея Шипилева)
 - Формат XML. Создание схемы XSD.
@@ -31,14 +31,14 @@
   - XPath
   - XSLT
 
-## 31.10: Занятие 3
+## [Занятие 3](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson03.md)
 - Разбор ДЗ (работа с XML)
 - [Обзор Guava](https://drive.google.com/open?id=0B9Ye2auQ_NsFeFB5a29JQ2tRNHM)
 - Монады. flatMap
 - SOA и Микросервисы
 - Многомодульный Maven проект
 
-## 07.11: Занятие 4
+## [Занятие 4](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson04.md)
 - Разбор ДЗ (реализация структуры проекта, загрузка и разбор xml)
 - Thymleaf
 - Maven. Поиск и разрешение конфликтов зависимостей
@@ -46,21 +46,21 @@
 - Библиотеки и фреймворки для работы с JDBC.
 - Модуль persistence
 
-## 14.11: Занятие 5
+## [Занятие 5](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson05.md)
 - Разбор ДЗ 
   - Сохранение в базу в batch-моде с обработкой конфликтов
   - Вставка в несколько потоков
 - Конфигурирование приложения (<a href="https://github.com/typesafehub/config">Typesafe config</a>)
 - Lombok
 
-## 21.11: Занятие 6
+## [Занятие 6](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson06.md)
 - Разбор ДЗ (доработка модели и модуля export)
 - Миграция DB
 - Веб-сервисы (REST/SOAP)
   - Java реализации SOAP
   - Имплементируем Mail Service
   
-## 28.11: Занятие 7
+## [Занятие 7](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson07.md)
 - Разбор ДЗ 
   - реализация MailSender
   - сохранение результатов отправки в DB
@@ -71,7 +71,7 @@
 - Создание клиента почтового сервиса
 - Реализация массовой и групповой отправки почты. HW7
 
-## 05.12: Занятие 8
+## [Занятие 8](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson08.md)
 - Разбор ДЗ
    - Делаем общий mailService.wsdl
    - Обновление WSDL
@@ -80,7 +80,7 @@
 - SOAP Exception. Выделение общей части схемы
 - Коррекция схемы
 
-## 12.12: Занятие 9
+## [Занятие 9](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson09.md)
 - Добавление мавен плагинов (copy-rename-maven-plugin, maven-antrun-plugin, liquibase-maven-plugin)
 - Разбор ДЗ
   - Реализация вложений в веб-сервисе
@@ -91,7 +91,7 @@
 - JAX-WS Handlers (логирование SOAP)
 - Домашнее задание. Статистика
 
-## 19.12: Занятие 10
+## [Занятие 10](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson10.md)
 - Разбор ДЗ
   - Реализация SOAP handlers
   - Конфигурирование сервисов
@@ -99,7 +99,7 @@
 - JAX-RS. Интеграция с Jersey
 - JMS. Интеграция с [ActiveMQ](http://activemq.apache.org/)
  
-## 26.12: Занятие 11
+## [Занятие 11](https://github.com/JavaWebinar/masterjava/blob/doc/doc/lesson11.md)
 - Авторизация в контейнере Tomcat
 - Отправка почты с вложениями
   - по JAX-RS
