@@ -72,6 +72,7 @@
 - <a href="http://docs.spring.io/spring-ws/docs/2.2.0.RELEASE/reference/htmlsingle/#message-factories">Spring-WS Message Factories</a>
 
 #### Имплементируем Mail Service
+- [Introduction to JAX-WS](http://www.baeldung.com/jax-ws)
 - <a href="http://www.mkyong.com/tutorials/jax-ws-tutorials/">JAX-WS Tutorial</a>
    - <a href="http://jax-ws.java.net">GlassFish » Metro » JAX-WS</a>
    - MailService <a href="http://localhost:8080/mail/mailService?wsdl">WSDL</a> / <a href="http://localhost:8080/mail/mailService?xsd=1">XSD</a>
