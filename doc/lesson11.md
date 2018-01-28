@@ -76,6 +76,8 @@
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 8. [Разбор решения с асинхронными сервлетами](https://drive.google.com/open?id=0B9Ye2auQ_NsFTWk1VS1GV1ROY0U)
 #### Apply 11_8_async_servlet.patch
 
+-----------
+
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Коррекция:
 #### Apply 11_9_fix.patch
 - `UserDao.insertWitId` поправил на `UserDao.insertWithId`
