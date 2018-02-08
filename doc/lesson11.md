@@ -81,3 +81,4 @@
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Коррекция:
 #### Apply 11_9_fix.patch
 - `UserDao.insertWitId` поправил на `UserDao.insertWithId`
+- `UserTestData.FIST5_USERS` поправил на `FIRST5_USERS`
