@@ -37,7 +37,7 @@
 - <a href="http://stackoverflow.com/questions/1667454/xsl-transformation-in-java-with-parameters">XSL Transformation in Java with parameters</a>
 - <a href="https://greenbytes.de/tech/tc/xslt/">Test Cases for XSLT support in browsers</a>  
 
-## Затяние 3
+## Занятие 3
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. [Обзор Guava](https://drive.google.com/open?id=0B9Ye2auQ_NsFeFB5a29JQ2tRNHM)
 - [The Top 20 Most Popular Java Libraries](https://dzone.com/articles/the-top-100-java-libraries-in-2016-after-analyzing)
 - [Guava Wiki](https://github.com/google/guava/wiki)
