@@ -50,7 +50,7 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFbGlWWkk0amM1cms">Монады. flatMap</a>
 - <a href="https://habrahabr.ru/post/183150/"> Функторы, аппликативные функторы и монады в картинках</a>
 - <a href="https://habrahabr.ru/company/cit/blog/262055/">Монады в Java 8</a>
-  - <a href="https://www.coursera.org/specializations/scala">Куср Сoursera по функциональному программированию</a>
+  - <a href="https://www.coursera.org/specializations/scala">Курс Сoursera по функциональному программированию</a>
 - <a href="http://stackoverflow.com/a/19932439/548473">Three Monad laws.</a>
 - <a href="https://dzone.com/articles/whats-wrong-java-8-part-iv">What's Wrong in Java 8 Monads</a>
 
