@@ -41,7 +41,7 @@
 - <a href="https://habrahabr.ru/post/314048/">Техника безопасности при работе с PostgreSQL</a>
 - <a href="https://habrahabr.ru/post/231213/">История про несогласованные данные</a>
 - <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
- -[Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
+  - [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSkh4eWtSb2I4YUU">Веб-сервисы</a>
 #### Apply 6_5_web_services.patch
