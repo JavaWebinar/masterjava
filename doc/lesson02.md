@@ -8,7 +8,7 @@
 ## <a href="https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFSnRmQ3dQRm9hSWM">Материалы занятия</a> (скачать все патчи можно через Download папки patch)
 ![image](https://cloud.githubusercontent.com/assets/13649199/18330295/5f2ca214-7560-11e6-8e1e-c0494f798c37.png)
 
-## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1.1 <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRWpKUUlYYjhuVGs">Вступление. Разбор домашнего задания HW1</a>
+## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1.1 <a href="https://drive.google.com/file/d/1vCI26QlQPQd5Z5zj4aeXDkgIsNmPP7s4">Вступление. Разбор домашнего задания HW1</a>
 #### 2_1_HW1_singleThreadMultiplyOpt.patch
 #### 2_2_HW1_concurrentMultiply.patch
 - <a href="https://habrahabr.ru/post/283290/">Сравнение EE и Spring в комментариях</a>
