@@ -38,7 +38,7 @@ mvn org.codehaus.cargo:cargo-maven2-plugin:run
 
 **ВНИМАНИЕ!! Не забудте положить `persist.conf` в `/apps/masterjava/config` (или убрать `required` из `persist\src\main\resources\persist.conf`)**
 
-- <a href="http://springtips.blogspot.ru/">Переопределение занчений в конфигурации в Spring</a>. 
+- <a href="https://web.archive.org/web/20161002192709/http://springtips.blogspot.ru/">Переопределение занчений в конфигурации в Spring</a>. 
 - <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html#howto-change-configuration-depending-on-the-environment">Встроенные профили Spring Boot</a>
 - <a href="http://commons.apache.org/proper/commons-configuration/index.html">Apache commons-configuration2</a>
 - <a href="https://github.com/typesafehub/config">Typesafe config library </a>, user in <a href="https://www.playframework.com/documentation/2.5.x/ConfigFile">Playframework</a>
