@@ -36,7 +36,7 @@
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFbFR5bDBzYzdYeDA">Миграция DB</a>
 - <a href="http://www.liquibase.org">Liquibase</a> (<a href="http://www.dropwizard.io/0.7.1/docs/manual/migrations.html">Dropwizard Migrations</a>)
-- <a href="https://flywaydb.org/">Flyway</a> (<a href="http://stackoverflow.com/questions/37385823/liquibase-vs-flyway-which-one-to-use">Liquibase vs FLyway which one to use?</a>)
+- <a href="https://flywaydb.org/">Flyway</a>, [Liquibase vs FLyway which one to use? (удалили на so, копия на русском)](https://stackoverrun.com/ru/q/10306280)
 - <a href="http://www.mybatis.org/migrations/">MyBatis Migrations</a>
 - <a href="https://habrahabr.ru/post/314048/">Техника безопасности при работе с PostgreSQL</a>
 - <a href="https://habrahabr.ru/post/231213/">История про несогласованные данные</a>
