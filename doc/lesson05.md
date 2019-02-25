@@ -6,7 +6,7 @@
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. [Сохранение в базу в batch-моде с обработкой конфликтов](https://drive.google.com/file/d/0B9Ye2auQ_NsFZEJwR2ZqMEdVRG8)
 
-#### 5_1_HW4_export_chunk.patch
+#### 5_1_HW4_upload_chunk.patch
 > Добавил `required` в `upload.html`
 
 ```
