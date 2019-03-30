@@ -21,7 +21,7 @@
 - [Durian](https://github.com/diffplug/durian) ( [Дуриан](https://ru.wikipedia.org/wiki/Дуриан) )
 
 > #### Дополнительно:
-> #### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  [Николай Алименков - Нужен ли нам JMS в мире современных Java-технологий?](http://bekeriya.com/watch?v=RVwXdCfzJZA)
+> #### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  [Николай Алименков - Нужен ли нам JMS в мире современных Java-технологий?](https://www.youtube.com/watch?v=ExjPxDxkmFo)
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. [Concurrent and distributed applications toolkit AKKA](https://drive.google.com/open?id=0B9Ye2auQ_NsFR0tjc28tRzVHQVk)
 > #### Внимание! Перед накаткой патчеа создайте в `services` каталог `akka-remote` (`services/akka-remote`) иначе файлы придется руками сюда перетаскивать.
