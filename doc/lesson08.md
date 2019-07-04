@@ -10,7 +10,7 @@
 [Способы конфигурирования Maven](https://maven.apache.org/configure.html) 
 - MAVEN_OPTS
 - settings.xml 
-- .mvn folder: в `maven.config` например `-Dmasterjava.config=/some/path/to/config`  
+- .mvn папка в корне проекта: `maven.config` с пераметром `-Dmasterjava.config=/some/path/to/config`  
 
 #### Apply 1_HW7_wsdl_share.patch
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFelpFalNxQVBTc3c">Доступ к переменным maven в приложении</a>
