@@ -66,7 +66,7 @@
 - [EduTools плагин от JetBrains для изучения Kotlin, Java, Python, Scala, ...](http://javaops.ru/view/story/story21#edutools)
 - [Котлин рулит](https://habrahabr.ru/company/JetBrains/blog/329028/)
    - [Почему следует полностью переходить на Kotlin](https://habrahabr.ru/company/mailru/blog/329294)
-   - [Stepik: Бесплатный Stepik курс Kotlin](https://stepik.org/course/Kotlin-2852)
+   - [Stepik: Бесплатный Stepik курс Kotlin (доступен также через плагин JetBrains EduTools)](https://stepik.org/course/Kotlin-2852)
    - [Devcolibri: Базовый курс по Kotlin](https://www.youtube.com/playlist?list=PLIU76b8Cjem4ZOt3tlWykUX1AjL9zE19t)
    
 
