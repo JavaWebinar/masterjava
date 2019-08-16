@@ -63,10 +63,12 @@
 - [Scala dependency injection (di)](http://jonasboner.com/real-world-scala-dependency-injection-di)
 - [Когда появится следующий большой язык программирования](https://habrahabr.ru/company/wrike/blog/323550)
 - [Как я нашел лучший в мире язык программирования](https://habrahabr.ru/post/260149/)
+- [ EduTools плагин от JetBrains для изучения Kotlin, Java, Python, Scala, ...](http://javaops.ru/view/story/story21#edutools)
 - [Котлин рулит](https://habrahabr.ru/company/JetBrains/blog/329028/)
    - [Почему следует полностью переходить на Kotlin](https://habrahabr.ru/company/mailru/blog/329294)
    - [Stepik: Бесплатный Stepik курс Kotlin](https://stepik.org/course/Kotlin-2852)
    - [Devcolibri: Базовый курс по Kotlin](https://www.youtube.com/playlist?list=PLIU76b8Cjem4ZOt3tlWykUX1AjL9zE19t)
+   
 
 ## Домашнее задание
 -  Сделать асинхронное ожидание и **вывод результатов отправки почты** пользователю в сервлетах:
