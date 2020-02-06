@@ -105,6 +105,7 @@
 - <a href="http://stackoverflow.com/questions/17482320/maven-module-inheritance-vs-aggregation">Maven module inheritance vs aggregation</a>
 - Расширение кругозора:
   - <a href="https://www.youtube.com/watch?v=21qdRgFsTy0">Антон Архипов, Евгений Борисов, Барух Садогурский — Maven vs Gradle vs SBT</a>
+  - [Maven CI Friendly Versions: параметризация версии проекта](https://maven.apache.org/maven-ci-friendly.html)
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW3
 - Сделать структуру проекта согласно схеме. В модулях c `packaging=pom` кода нет, корневое `src` перенести в другие модули. 
