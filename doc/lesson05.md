@@ -23,7 +23,7 @@ mvn org.codehaus.cargo:cargo-maven2-plugin:run
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [Вставка в несколько потоков](https://drive.google.com/file/d/0B9Ye2auQ_NsFek5PYTdQbjBlUU0)
 #### 5_4_HW4_parallel.patch
 **Внимание! в postgres 10 с sequence могут быть проблемы**
-> Правка для postgres 10: `h.execute("SELECT setval('user_seq', " + (id + step - 1) + ")")`
+> Правка для postgres 10 (`UserDao` 32): `h.execute("SELECT setval('user_seq', " + (id + step - 1) + ")")`
 
 > Fix: в `UserProcessor.process` нельзя делать `85:  chunk.clean()`, тк этот список асинхронно используется для вставки.
 
