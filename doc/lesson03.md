@@ -101,7 +101,7 @@
      
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFelJqQ0d5WllaR0k">Многомодульный Maven проект</a>
 #### Apply 3_5_multimodule.patch
-- <a href="https://github.com/JavaWebinar/topjava08/blob/doc/doc/lesson01.md#-4-maven">Maven на topjava</a>. Snapshot. <a href="http://maven.apache.org/guides/mini/guide-multiple-modules.html">The Reactor</a>.
+- Snapshot. <a href="http://maven.apache.org/guides/mini/guide-multiple-modules.html">The Reactor</a>.
 - <a href="http://stackoverflow.com/questions/17482320/maven-module-inheritance-vs-aggregation">Maven module inheritance vs aggregation</a>
 - Расширение кругозора:
   - <a href="https://www.youtube.com/watch?v=21qdRgFsTy0">Антон Архипов, Евгений Борисов, Барух Садогурский — Maven vs Gradle vs SBT</a>
