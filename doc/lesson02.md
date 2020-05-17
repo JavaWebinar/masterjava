@@ -5,6 +5,8 @@
 - **Код проекта обновляется и не всегда совпадает с видео (можно увидеть как развивался проект). Изменения в проекте указываю после соответствующего патча.** 
 - <a href="https://www.youtube.com/watch?v=eq3KiAH4IBI&ab_channel=IntelliJIDEA">42 IntelliJ IDEA Tips and Tricks</a>
 
+### В коде проекта используется JDK 8. Если у вас выше, необходимо будет включить в проект [дополнительные зависимости, исключенные в JDK 9](https://stackoverflow.com/questions/48204141/548473) 
+
 ## <a href="https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFSnRmQ3dQRm9hSWM">Материалы занятия</a> (скачать все патчи можно через Download папки patch)
 ![image](https://cloud.githubusercontent.com/assets/13649199/18330295/5f2ca214-7560-11e6-8e1e-c0494f798c37.png)
 
