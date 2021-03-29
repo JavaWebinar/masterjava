@@ -39,6 +39,7 @@
 - <a href="https://flywaydb.org/">Flyway</a>, [Liquibase vs FLyway which one to use? (удалили на so, копия на русском)](https://stackoverrun.com/ru/q/10306280)
 - <a href="http://www.mybatis.org/migrations/">MyBatis Migrations</a>
 - <a href="https://habrahabr.ru/post/314048/">Техника безопасности при работе с PostgreSQL</a>
+- [Здоровье индексов в PostgreSQL глазами Java-разработчика](https://habr.com/ru/post/490824/)
 - <a href="https://habrahabr.ru/post/231213/">История про несогласованные данные</a>
 - <a href="https://docs.google.com/document/d/1ul1jH7sccyQVqpjItdFo_OQI9YxJV3V5hxqI7xa-YPM">DB Migration rules</a>
   - [Опыт 1440 миграций баз данных](https://habr.com/company/wrike/blog/414441/)
