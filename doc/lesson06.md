@@ -95,6 +95,11 @@
    mail.debug: true
    mail.fromName: Name
 ```
+Если конфигурируете почту Yandex, [перейдите в настройки](https://mail.yandex.ru/#setup/client) и поднимите галочки:
+
+![image](https://user-images.githubusercontent.com/11200258/113790310-c5b03b80-9749-11eb-969a-60ade652d405.png)
+
+
 - Сохранят результат отправки писем в DB (в `MailSender`). 
 - DAO и модель для сохранения сделать в модуле `mail-service`
 - Протестировать отправку почты через SoapUI и/или `MailServiceClient`
