@@ -99,6 +99,7 @@
 
 ![image](https://user-images.githubusercontent.com/11200258/113790310-c5b03b80-9749-11eb-969a-60ade652d405.png)
 
+Также, с включенным Avast были замечены проблемы с `ValidatorException: PKIX path building failed`
 
 - Сохранят результат отправки писем в DB (в `MailSender`). 
 - DAO и модель для сохранения сделать в модуле `mail-service`
