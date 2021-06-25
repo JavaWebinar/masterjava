@@ -35,7 +35,7 @@
 - <a href="https://habrahabr.ru/company/luxoft/blog/157273">Обзор java.util.concurrent.*</a>
 - <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>
 - <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
-- <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
+- <a href="http://blog.dst.in.ua/?p=320">Использование ThreadLocal переменных</a>
 - <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
 - <a href="http://stackoverflow.com/questions/20163056/in-java-can-thread-switching-happen-in-the-synchronized-block">Can thread switching happen in the synchronized block?</a>
 - [The Deadlock Empire](https://deadlockempire.github.io/)
