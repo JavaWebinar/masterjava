@@ -52,28 +52,28 @@
 
 - <a href="http://www.vogella.com/tutorials/JavaXML/article.html">Работа с XML в Java</a>.
 - <a href="https://ru.wikipedia.org/wiki/Document_Object_Model">DOM</a>, <a href="https://ru.wikipedia.org/wiki/SAX">SAX</a>
-- <a href="http://www.ibm.com/developerworks/ru/library/x-jaxp/">JAXP: вспомогательный слой над SAX и DOM API</a>
+- <a href="https://web.archive.org/web/20200811111436/http://www.ibm.com/developerworks/ru/library/x-jaxp/">JAXP: вспомогательный слой над SAX и DOM API</a>
 - <a href="https://ru.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">JAXB</a>, <a href="https://ru.wikipedia.org/wiki/JAXP">JAXP</a>, <a href="https://ru.wikipedia.org/wiki/Xerces">Xerces</a>, <a href="https://ru.wikipedia.org/wiki/Xalan">Xalan</a>
-- <a href="https://www.ibm.com/developerworks/ru/library/x-javaxmlvalidapi/">Валидации XML</a>
+- <a href="https://web.archive.org/web/20161213095046/http://www.ibm.com/developerworks/ru/library/x-javaxmlvalidapi/">Валидации XML</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFWnpzN3l4cGc3aFE">StAX</a>
 #### 2_8_StAX.patch
 - [Java XML API: выбираем правильно. StAX: работаем с удовольствием](https://habrahabr.ru/post/339716/)
-- <a href="https://en.wikipedia.org/wiki/StAX">StAX</a>: <a href="https://www.ibm.com/developerworks/ru/library/x-stax1/">XMLStreamReader</a>, <a href="https://www.ibm.com/developerworks/ru/library/x-stax2/">XMLEventReader</a>
+- <a href="https://en.wikipedia.org/wiki/StAX">StAX</a>: <a href="https://web.archive.org/web/20160628025221/http://www.ibm.com/developerworks/ru/library/x-stax1/">XMLStreamReader</a>, <a href="https://www.ibm.com/developerworks/ru/library/x-stax2/">XMLEventReader</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFanFseGRaRUV6TXc">XPath</a>
 #### 2_9_XPath.patch
-- XPath: <a href="http://www.ibm.com/developerworks/ru/library/x-javaxpathapi/">Java XPath API</a>
+- XPath: <a href="https://web.archive.org/web/20161118174952/http://www.ibm.com/developerworks/ru/library/x-javaxpathapi/">Java XPath API</a>
 - <a href="https://msdn.microsoft.com/ru-ru/library/ms256086">Примеры XPath</a> 
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFbkVNWGliQUJtVlk">XSLT</a>
 #### 2_10_Xslt.patch
-- <a href="http://www.ibm.com/developerworks/ru/library/x-jaxp2">Преобразование XSLT</a>, <a href="http://stackoverflow.com/questions/3360017/why-does-xslt-output-all-text-by-default">Default XSLT output</a>
+- <a href="https://web.archive.org/web/20200813094909/https://www.ibm.com/developerworks/ru/library/x-jaxp2/">Преобразование XSLT</a>, <a href="http://stackoverflow.com/questions/3360017/why-does-xslt-output-all-text-by-default">Default XSLT output</a>
 - <a href="https://ru.wikipedia.org/wiki/XSLT">XSLT</a>, <a href="https://ru.wikipedia.org/wiki/XSL">XSL</a>
   - <a href="https://www.w3.org/TR/xslt#built-in-rule">XSL Transformations (XSLT)</a>
 - Дополнительно
-  - [What kind of language is XSLT?](https://www.ibm.com/developerworks/xml/library/x-xslt)
-  - [Saxon: Anatomy of an XSLT processor](http://www.ibm.com/developerworks/library/x-xslt2/)
+  - [What kind of language is XSLT?](https://web.archive.org/web/20201109035750/http://www.ibm.com/developerworks/xml/library/x-xslt/)
+  - [Saxon: Anatomy of an XSLT processor](https://web.archive.org/web/20200916195642/http://www.ibm.com/developerworks/library/x-xslt2/)
   
 ## Домашнее задание
 - 1: Изменить XML схему: 

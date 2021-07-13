@@ -33,7 +33,7 @@
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFY2pwemVtYU1WU2M">Стили WSDL. Кастомизация WSDL</a>
 #### Apply 7_5_customize_WSDL.patch
 - <a href="https://ru.wikipedia.org/wiki/SOAP">SOAP</a>
-- <a href="http://www.ibm.com/developerworks/webservices/library/ws-whichwsdl/">Стили WSDL</a>
+- <a href="https://web.archive.org/web/20210224153547/https://www.ibm.com/developerworks/webservices/library/ws-whichwsdl/">Стили WSDL</a>
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeV90cGNSU1hqelk">Публикация кастомизированного WSDL. Автогенерация.</a> 
 #### Apply 7_6_publish_CustomizedWSDL.patch

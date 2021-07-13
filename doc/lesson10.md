@@ -20,7 +20,7 @@
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. [JavaEE](https://drive.google.com/open?id=0B9Ye2auQ_NsFUU92ZFBEZmJjb2c)
 - <a href="https://ru.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition">Java Platform, Enterprise Edition</a>
 - <a href="https://habrahabr.ru/post/283290/">Холивары в комментах</a>
-- <a href="http://www.ibm.com/developerworks/websphere/techjournal/1301_stephen/1301_stephen.html">CDI</a>
+- <a href="https://web.archive.org/web/20201013185514/https://www.ibm.com/developerworks/websphere/techjournal/1301_stephen/1301_stephen.html">CDI</a>
 - <a href="https://ru.wikipedia.org/wiki/Enterprise_JavaBeans">Enterprise JavaBeans</a>
 - <a href="http://tomee.apache.org/comparison.html">TomEE состав</a>
 - <a href="https://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/">Application Server statistics</a>
