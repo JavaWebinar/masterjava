@@ -30,7 +30,7 @@
 
 > Сделал forks=10 для большой точности измерений и убрал лишние измерения 
  
-- <a href="http://tutorials.jenkov.com/java-performance/jmh.html">JMH - Java Microbenchmark Harness</a>, <a href="http://java-performance.info/jmh/">Java Performance Tuning Guide</a>
+- <a href="http://tutorials.jenkov.com/java-performance/jmh.html">JMH - Java Microbenchmark Harness</a>, <a href="http://java-performance.info/jmh/">Java Performance Tuning Guide</a> (если не работает, попробуйте перейти на Introduction to JMH [отсюда](https://d1k2jhzcfaebet.cloudfront.net/#post-750))
 - <a href="https://github.com/artyushov/idea-jmh-plugin">idea-jmh-plugin</a>, <a href="http://stackoverflow.com/questions/37720692/exception-while-trying-to-acquire-a-jmh-lock/#39562747">Exception while trying to acquire a JMH lock</a>
 - <a href="http://stackoverflow.com/a/1172371/548473">Maven latest dependency version</a>
 
