@@ -66,6 +66,14 @@
 - XPath: <a href="https://web.archive.org/web/20161118174952/http://www.ibm.com/developerworks/ru/library/x-javaxpathapi/">Java XPath API</a>
 - <a href="https://msdn.microsoft.com/ru-ru/library/ms256086">Примеры XPath</a> 
 
+В IDEA в контекстном меню на элемент XML есть пункт (2-й снизу) `Evaluate XPath...`  
+На имена города он выдает `/Payload/Cities/City/text()`  
+Чтобы это выражение работало в нашем `XPathProcessorTest` нужно отключить `NamespaceAware`:   
+```
+public class XPathProcessor
+...
+25       DOCUMENT_FACTORY.setNamespaceAware(false);
+```
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFbkVNWGliQUJtVlk">XSLT</a>
 #### 2_10_Xslt.patch
 - <a href="https://web.archive.org/web/20200813094909/https://www.ibm.com/developerworks/ru/library/x-jaxp2/">Преобразование XSLT</a>, <a href="http://stackoverflow.com/questions/3360017/why-does-xslt-output-all-text-by-default">Default XSLT output</a>
