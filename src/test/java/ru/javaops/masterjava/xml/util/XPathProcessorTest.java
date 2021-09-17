@@ -16,7 +16,7 @@ public class XPathProcessorTest {
                      Resources.getResource("payload.xml").openStream()) {
             XPathProcessor processor = new XPathProcessor(is);
             XPathExpression expression =
-                    XPathProcessor.getExpression("/*[name()='Payload']/*[name()='Cities']/*[name()='City']/text()");
+                    XPathProcessor.getExpression("/Payload/Cities/City/text()");
             NodeList nodes = processor.evaluate(expression, XPathConstants.NODESET);
             IntStream.range(0, nodes.getLength()).forEach(
                     i -> System.out.println(nodes.item(i).getNodeValue())

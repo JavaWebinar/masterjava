@@ -22,7 +22,7 @@ public class XPathProcessor {
     private static final XPath XPATH = XPATH_FACTORY.newXPath();
 
     static {
-        DOCUMENT_FACTORY.setNamespaceAware(true);
+        DOCUMENT_FACTORY.setNamespaceAware(false);
         try {
             DOCUMENT_BUILDER = DOCUMENT_FACTORY.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
