@@ -88,6 +88,12 @@ mvn dependency:analyze
 Общие файлы конфигурации заданы в maven parent как в `<masterjava.config>/apps/masterjava/config/</masterjava.config>`.
 **Нужно у себя в корне диска создать этот каталог и положить в него содержимое `config_templates`**
 
+UPDATE: c Maven 3.3.1 [в переменной `${maven.multiModuleProjectDirectory}` храниться рутовый каталог многомодульного проекта](https://stackoverflow.com/a/49528226/548473). Те мы можем создавать `config` и хранить его прямо в нашем репозитории (вместо `config_templates`) и делать путь к нем как
+```
+<masterjava.config>${maven.multiModuleProjectDirectory}/config/</masterjava.config>
+```
+Если в корне проекта сделать каталог `.mvn`, то эта переменная работает при сборке из зависимых модулей.
+
 - <a href="http://www.slf4j.org/legacy.html">Добавление зависимостей логирования</a>
 - <a href="https://www.mkyong.com/logging/logback-xml-example">logback.xml Example</a>
 - Справочник:
