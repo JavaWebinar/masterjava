@@ -62,6 +62,8 @@
 - <a href="https://en.wikipedia.org/wiki/StAX">StAX</a>: <a href="https://web.archive.org/web/20160628025221/http://www.ibm.com/developerworks/ru/library/x-stax1/">XMLStreamReader</a>, <a href="https://www.ibm.com/developerworks/ru/library/x-stax2/">XMLEventReader</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFanFseGRaRUV6TXc">XPath</a>
+> Поправка к видео на 2:29 - лет 10-15 назад был популярен подход рисовать квадратиками в специальном приложении логику [связываения через сообщения разных сервисов](https://www.mulesoft.com/resources/esb/what-esb). Сервисы подключались к [ESB](https://ru.wikipedia.org/wiki/ESB) по разным протоколам. Один из них был [JBI](https://hrwiki.ru/wiki/Java_Business_Integration). Все это было достаточно красиво для продаж, но очень неуклюже для разработки. Cейчас уже редко где можно встретить, хотя Spring Integration, Apache Camel и пр. для определенных приложений-процессов используют.
+
 #### 2_9_XPath.patch
 - XPath: <a href="https://web.archive.org/web/20161118174952/http://www.ibm.com/developerworks/ru/library/x-javaxpathapi/">Java XPath API</a>
 - <a href="https://msdn.microsoft.com/ru-ru/library/ms256086">Примеры XPath</a> 
