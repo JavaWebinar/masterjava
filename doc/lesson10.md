@@ -59,6 +59,8 @@
 >   - `config_templates/context.xml` в `$TOMCAT_HOME/conf`
 >   - `$MAVEN_REPO(~/.m2)/org/apache/activemq/activemq-all/5.15.2/activemq-all-5.15.2.jar` в `$TOMCAT_HOME/lib`
 
+*Для новых версий activemq-all, например `activemq-all-5.16.3.jar`, [нужно добавить в зависимости `jackson-core`, `jackson-databind`, `jackson-databind`](https://cursos.alura.com.br/forum/topico-java-11-activemq-5-15-14-java-lang-noclassdeffounderror-com-fasterxml-jackson-databind-objectmapper-141531)*
+
 - <a href="https://ru.wikipedia.org/wiki/Java_Message_Service">Java Message Service</a>
 - <a href="http://queues.io/">Queues</a>
 - <a href="https://www.linkedin.com/pulse/jms-vs-amqp-eran-shaham">JMS vs AMQP</a>, <a href="https://ru.wikipedia.org/wiki/AMQP">AMQP</a>
