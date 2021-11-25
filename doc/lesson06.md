@@ -95,17 +95,17 @@
    mail.debug: true
    mail.fromName: Name
 ```
-Если конфигурируете почту Yandex, [перейдите в настройки](https://mail.yandex.ru/#setup/client) и поднимите галочки:
+> Если конфигурируете почту Yandex, [перейдите в настройки](https://mail.yandex.ru/#setup/client) и поднимите галочки:
 
 ![image](https://user-images.githubusercontent.com/11200258/113790310-c5b03b80-9749-11eb-969a-60ade652d405.png)
 
-Также, с включенным Avast были замечены проблемы с `ValidatorException: PKIX path building failed`
+> C включенным Avast были замечены проблемы с `ValidatorException: PKIX path building failed`. Avast и Avast Mail Shield для отправки требуется отключить
+
+> В случае DEBUG SMTP: AUTH LOGIN failed, Error: authentication failed: Invalid user or password! проверьте [Шаг 2. Создайте пароль приложения](https://yandex.ru/support/mail/mail-clients/others.html) - при галочке "Включить пароли приложений" нужно указывать пароль к приложению.
 
 - Сохранят результат отправки писем в DB (в `MailSender`). 
 - DAO и модель для сохранения сделать в модуле `mail-service`
 - Протестировать отправку почты через SoapUI и/или `MailServiceClient`
-
-> если стоит Avast и Avast Mail Shield, для отправки требуется отключить
 
 #### Optional
 - добавить в модуле `upload` импорт и сохранение в базу групп и проектов (упрощение: только добавление без удаления/модификации)
