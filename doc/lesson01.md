@@ -16,8 +16,9 @@
   - <a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap#24171266">Stack and Heap</a>
   - Дополнительно:
     - <a href="http://habrahabr.ru/post/117274/">Из каких частей состоит память java процесса</a>.
-    - <a href="http://www.javaspecialist.ru/2011/04/permanent.html">Permanent область памяти</a>
-    - <a href="http://www.javaspecialist.ru/2011/04/java-thread-stack.html">Java thread stack </a>
+    - <a href="https://devsday.ru/blog/details/825">Permanent область памяти</a>
+    > Замечание: [с JDK 7 String Pool переехал в Heap](https://topjava.ru/blog/rukovodstvo-po-string-pool-v-java)
+    - [Стек и куча в Java](https://topjava.ru/blog/stack-and-heap-in-java)
     - <a href="http://habrahabr.ru/post/134102/">Размер Java объектов</a>
 
 ### Ленивая инициализация
@@ -30,7 +31,7 @@
 - <a href="https://ru.wikipedia.org/wiki/Параллелизм_в_Java">Параллелизм в Java</a>
 - <a href="https://ru.wikipedia.org/wiki/Монитор_(синхронизация)">Монитор (синхронизация)</a>
 - <a href="https://en.wikipedia.org/wiki/Compare-and-swap">Compare-and-swap</a>
-- <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
+- <a href="https://devsday.ru/blog/details/818">Java Memory Model</a>
 - <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
 - <a href="https://habrahabr.ru/company/luxoft/blog/157273">Обзор java.util.concurrent.*</a>
 - <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>
