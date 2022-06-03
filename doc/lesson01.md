@@ -20,6 +20,9 @@
     > Замечание: [с JDK 7 String Pool переехал в Heap](https://topjava.ru/blog/rukovodstvo-po-string-pool-v-java)
     - [Стек и куча в Java](https://topjava.ru/blog/stack-and-heap-in-java)
     - <a href="http://habrahabr.ru/post/134102/">Размер Java объектов</a>
+  - Оптимизация памяти
+    - [Escape analysis и скаляризация: Пусть GC отдохнет](https://habr.com/company/jugru/blog/322348)
+    - [Условия для размещения объекта в стеке](https://stackoverflow.com/a/43002529/548473)
 
 ### Ленивая инициализация
 - <a href="https://habrahabr.ru/post/27108/">Реализация Singleton в JAVA</a>
@@ -31,15 +34,16 @@
 - <a href="https://ru.wikipedia.org/wiki/Параллелизм_в_Java">Параллелизм в Java</a>
 - <a href="https://ru.wikipedia.org/wiki/Монитор_(синхронизация)">Монитор (синхронизация)</a>
 - <a href="https://en.wikipedia.org/wiki/Compare-and-swap">Compare-and-swap</a>
-- <a href="https://devsday.ru/blog/details/818">Java Memory Model</a>
+- <a href="http://www.javaspecialist.ru/2011/06/java-memory-model.html">Java Memory Model</a>
 - <a href="http://www.skipy.ru/technics/synchronization.html">Синхронизация потоков</a>
 - <a href="https://habrahabr.ru/company/luxoft/blog/157273">Обзор java.util.concurrent.*</a>
 - <a href="https://habrahabr.ru/post/132884/">Как работает ConcurrentHashMap</a>
 - <a href="https://habrahabr.ru/post/277669/"> Справочник по синхронизаторам java.util.concurrent.*</a>
-- <a href="http://blog.dst.in.ua/?p=320">Использование ThreadLocal переменных</a>
+- <a href="http://articles.javatalks.ru/articles/17">Использование ThreadLocal переменных</a>
 - <a href="https://www.youtube.com/watch?v=8piqauDj2yo">Николай Алименков — Прикладная многопоточность</a>
 - <a href="http://stackoverflow.com/questions/20163056/in-java-can-thread-switching-happen-in-the-synchronized-block">Can thread switching happen in the synchronized block?</a>
 - [The Deadlock Empire](https://deadlockempire.github.io/)
+- [Реактивное программирование - как, зачем и стоит ли?](https://habr.com/ru/company/oleg-bunin/blog/543386/)
 
 #### Tproger: Многопоточное программирование в Java 8
 - <a href="https://tproger.ru/translations/java8-concurrency-tutorial-1/">1. Параллельное выполнение кода с помощью потоков</a>
@@ -49,10 +53,16 @@
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://www.youtube.com/watch?v=AEhIh2qd-FM">Реализация многопоточной отправки писем. Execution Framework</a>
 > правка к видео: `22:   completionService.submit(..)`
 
-### ![](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png)  Все изменения в проекте будут делаться на основе патчей
-#### Скачайте [1_1_MailService.patch](https://drive.google.com/open?id=0B9Ye2auQ_NsFTE5ZV3pzWElxTWM), положите его в проект, правой мышкой на нем сделайте Apply Patch ...
+Вычекать этот проект:
+```git clone  https://github.com/JavaOPs/masterjava.git```
+
+> - [Настройка git на свой репозиторий](https://github.com/JavaOPs/basejava/blob/master/lesson/lesson1.md#настройка-проекта)
+> - [Правила работы с патчами на проекте](https://github.com/JavaOPs/topjava/wiki/Git)
+
+#### Все изменения в проекте будут делаться на основе патчей: скачайте [1_1_MailService.patch](https://drive.google.com/open?id=0B9Ye2auQ_NsFTE5ZV3pzWElxTWM), положите его в проект, правой мышкой на нем сделайте Apply Patch ...
 
 ----------------------------
+- [Как сделать Java код проще и нагляднее](https://habrahabr.ru/company/wrike/blog/349652/)
 
 ### Ресурсы (основы)
 - Intuit, <a href="http://www.intuit.ru/studies/courses/16/16/lecture/27127">Потоки выполнения. Синхронизация</a>
@@ -65,9 +75,6 @@
 
 ---
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Задание первого занятия
-
-Вычекать этот проект:
-```git clone  https://github.com/JavaOPs/masterjava.git```
 
 - Применить <a href="https://habrahabr.ru/post/114797/">оптимизацию</a> к MatrixUtil.singleThreadMultiply
 - Реализовать метод `MatrixUtil.concurrentMultiply`, позволяющий многопоточно <a href="https://ru.wikipedia.org/wiki/Умножение_матриц">перемножать квадратные матрицы N*N</a>.
