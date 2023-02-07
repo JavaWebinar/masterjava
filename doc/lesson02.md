@@ -44,6 +44,7 @@
 ## Работа с XML в Java
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFM0hGNnVCMHN5YTg">JAXB, JAXP</a>
+Для генерации Java схемы из xsd проверьте плагин **Jakarta EE: Web Services (JAX-WS)**. Схема генериться через главное меню: _Tools -> XML Actions -> Generate Java code from XML Schema Using JAXB..._. Возможно пакет уже будет новый `jakarta`, поправте на `javax`.
 #### 2_7_JAXB.patch
 > - Добавил в `maven-surefire-plugin` UTF-8
 > - Убрал лишний `synchronized`  в `JaxbParser.marshal()` (уже есть в `JaxbMarshaller.marshal()`)
