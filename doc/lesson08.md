@@ -50,6 +50,7 @@
 - <a href="https://docs.oracle.com/cd/E14571_01/web.1111/e13734/mtom.htm">Binary Data Transmission Using MTOM/XOP</a> 
 - <a href="http://www.soapui.org/SOAP-and-WSDL/adding-headers-and-attachments.html">Тестирование вложений через SoapUi.</a>
 - <a href="https://commons.apache.org/proper/commons-email/userguide.html">Sending emails with attachments</a>
-  
+>  При `timeout=10s` и `debug=true` в `mail.conf` для писем со вложениями логирование будет настолько долгим (attachments тоже логируются), что сервис будет отваливаться по таймату (но письма будут нормально отправляться).
+Решение: при отправке писем со вложениями отключать дебаг или увеличивать таймаут (например 30s)
 ### Optional
 - Добавить <a href="https://habrahabr.ru/post/310738/">Git revision</a> в `version.html` 
