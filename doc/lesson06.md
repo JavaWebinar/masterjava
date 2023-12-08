@@ -103,6 +103,11 @@
 
 > В случае DEBUG SMTP: AUTH LOGIN failed, Error: authentication failed: Invalid user or password! проверьте [Шаг 2. Создайте пароль приложения](https://yandex.ru/support/mail/mail-clients/others.html) - при галочке "Включить пароли приложений" нужно указывать пароль к приложению.
 
+> При попытке подключиться к хосту smtp.yandex.ru(или другому) возможен `SunCertPathBuilderException: unable to find valid certification path to requested target`.
+> В таком случае нужно или выполнить [две команды в терминале](https://sky.pro/media/isklyuchenie-sun-security-provider-certpath-suncertpathbuilderexception-v-java/)
+> или [сделать все как в статье](https://mkyong.com/webservices/jax-ws/suncertpathbuilderexception-unable-to-find-valid-certification-path-to-requested-target/).
+> Во втором случае перед запуском пропишите в аргументах приложения имя хоста(smtp.yandex.ru:465 если через яндекс)
+
 - Сохранят результат отправки писем в DB (в `MailSender`). 
 - DAO и модель для сохранения сделать в модуле `mail-service`
 - Протестировать отправку почты через SoapUI и/или `MailServiceClient`
